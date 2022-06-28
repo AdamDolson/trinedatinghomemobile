@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="We're taking a more conscious approach to dating
+    and relationships using the science of synastry. Start matching, meeting, and
+    making meaningful connections today with Trine!">
+    <title>Trine - Astro Dating, Meet People and Make Connections</title>
+    <link rel="icon" href="favicon-logo.png">
+    <style media="screen">
+      /* Body formatting. */
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(#fffde6, #ffffff, #fffde6);
+        background-repeat: no-repeat;
+      }
+      /* Top navigation. */
+      .top-navigation {
+        height: 8vh;
+        position: fixed;
+        width: 100%;
+        background-image: linear-gradient(to right, #ff3300, #ff7700);
+        display: flex;
+        box-shadow: 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%), 0px 2px 4px -1px rgb(0 0 0 / 20%);
+      }
+      .top-navigation-banner-logo {
+        height: 100%;
+        width: 20%;
+        background-color: transparent;
+      }
+      .top-navigation-banner-logo img {
+        height: 100%;
+      }
+      .top-navigation-links {
+        height: 100%;
+        width: 80%;
+        background-color: transparent;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        text-align: center;
+      }
+      .top-navigation-links img {
+        height: 100%;
+      }
+      .top-spacer {
+        height: 8vh;
+        width: 100%;
+        background-color: transparent;
+      }
+      /* Navigation links. */
+      .navigation {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right, #ff3300, #ff7700);
+        display: none;
+        transition-property: opacity;
+        transition-duration: 1s;
+      }
+      .navigation-link-top {
+        height: 8%;
+        width: 100%;
+        display: flex;
+      }
+      .navigation-link-top-1 {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: left;
+        align-items: flex-end;
+        background-color: transparent;
+        font-family: Bahnschrift;
+        font-size: 6.0vw;
+        font-weight: 555;
+      }
+      .navigation-link-top-1 a {
+        padding-left: 33px;
+        text-decoration: none;
+        color: #ffffff;
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+      .navigation-link-top-2 {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: right;
+        align-items: flex-end;
+        background-color: transparent;
+      }
+      .navigation-link-top-2 img {
+        height: 60%;
+        padding-right: 24px;
+      }
+      .navigation-link {
+        height: 8%;
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: flex-end;
+        background-color: transparent;
+        font-family: Bahnschrift;
+        font-size: 6.0vw;
+        font-weight: 555;
+      }
+      .navigation-link a {
+        padding-left: 33px;
+        text-decoration: none;
+        color: #ffffff;
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+      .navigation-download {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+      }
+      .navigation-download img {
+        height: 66%;
+      }
+      .navigation-social {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: transparent;
+      }
+      .navigation-social img {
+        height: 60%;
+        padding-right: 3px;
+        padding-left: 3px;
+      }
+      /* Slogan, mission statement, sign up, log in, house impact glyph. */
+      .slogan-statement-sign-up-log-in-glyph-mobile {
+        height: 100vh;
+        width: 100%;
+        background-image: url("zodiacal-wheel-49-opacity.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 290%;
+      }
+      .slogan-statement-sign-up-log-in-glyph-mobile-1 {
+        height: 25%;
+        width: 100%;
+        background-color: transparent;
+      }
+      .slogan-statement-sign-up-log-in-glyph-mobile-2 {
+        height: 50%;
+        width: 100%;
+        background-color: transparent;
+      }
+      .slogan-statement-sign-up-log-in-glyph-mobile-2-1 {
+        height: 30%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 10vw;
+        font-weight: bold;
+        color: #ff3300;
+        text-align: center;
+      }
+      .slogan-statement-sign-up-log-in-glyph-mobile-2-2 {
+        height: 30%;
+        width: 100%;
+        display: flex;
+      }
+      .slogan-statement-sign-up-log-in-glyph-mobile-2-2-1 {
+        height: 100%;
+        width: 47.5%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .slogan-statement-sign-up-log-in-glyph-mobile-2-2-1 button {
+        height: 55%;
+        width: 88%;
+        background-image: linear-gradient(to left, #ff3300, #ff7700);
+        border: none;
+        color: #ffffff;
+        font-family: Bahnschrift;
+        font-size: 7.0vw;
+        font-weight: 444;
+        cursor: pointer;
+        box-shadow: 0px 0px 6px #000000;
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+      .slogan-statement-sign-up-log-in-glyph-mobile-2-2-2 {
+        height: 100%;
+        width: 5%;
+      }
+      .slogan-statement-sign-up-log-in-glyph-mobile-2-2-3 {
+        height: 100%;
+        width: 47.5%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .slogan-statement-sign-up-log-in-glyph-mobile-2-2-3 button {
+        height: 55%;
+        width: 88%;
+        background-image: linear-gradient(to right, #ff3300, #ff7700);
+        border: none;
+        color: #ffffff;
+        font-family: Bahnschrift;
+        font-size: 7.0vw;
+        font-weight: 444;
+        cursor: pointer;
+        box-shadow: 0px 0px 6px #000000;
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+      .slogan-statement-sign-up-log-in-glyph-mobile-2-3 {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        font-family: Bahnschrift;
+        font-size: 6.6vw;
+        font-weight: 400;
+        color: #000000;
+        text-align: center;
+      }
+      .slogan-statement-sign-up-log-in-glyph-mobile-2-3 p {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .slogan-statement-sign-up-log-in-glyph-mobile-3 {
+        height: 25%;
+        width: 100%;
+        background-color: transparent;
+      }
+      /* Our app mobile. */
+      .our-app-mobile-1 {
+        height: 12vh;
+        width: 100%;
+        background-image: linear-gradient(to left, #ff3300, #ff7700);
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 8.8vw;
+        font-weight: bold;
+      }
+      .our-app-mobile-1 a {
+        text-decoration: none;
+        color: #ffffff;
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+      .our-app-mobile-2 {
+        height: 60vh;
+        width: 100%;
+        background-image: url("our-app.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 130%;
+        border: none;
+      }
+      .our-app-mobile-3 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 400;
+      }
+      .our-app-mobile-3 p {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .our-app-mobile-4 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .our-app-mobile-4 img {
+        width: 66%;
+        display: none;
+      }
+      .our-app-mobile-5 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 400;
+      }
+      .our-app-mobile-5 p {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      /* 2 spacer. */
+      .spacer-2 {
+        height: 2vh;
+        width: 100%;
+      }
+      .spacer-2-border {
+        border-top: solid 0.66vh #ff3300;
+        height: 2vh;
+        width: 100%;
+      }
+      .spacer-3 {
+        height: 3vh;
+        width: 100%;
+      }
+      /* About mobile. */
+      .about-mobile-1 {
+        height: 12vh;
+        width: 100%;
+        background-image: linear-gradient(to right, #ff3300, #ff7700);
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 8.8vw;
+        font-weight: bold;
+      }
+      .about-mobile-1 a {
+        text-decoration: none;
+        color: #ffffff;
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+      .about-mobile-2 {
+        height: 50vh;
+        width: 100%;
+        background-image: url("about.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 120%;
+        border: none;
+      }
+      .about-mobile-3 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 400;
+      }
+      .about-mobile-3 p {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .about-mobile-4 {
+        height: 12vh;
+        width: 100%;
+        display: flex;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 444;
+        text-align: center;
+      }
+      .about-mobile-4 a {
+        text-decoration: none;
+        color: #000000;
+        padding-left: 15px;
+      }
+      .about-mobile-4 img {
+        height: 66%;
+      }
+      .about-mobile-4-1 {
+        height: 100%;
+        width: 5%;
+      }
+      .about-mobile-4-2 {
+        height: 100%;
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .about-mobile-4-3 {
+        height: 100%;
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .about-mobile-4-4 {
+        height: 100%;
+        width: 5%;
+      }
+      /* The Synastry Compendium mobile. */
+      .the-synastry-compendium-mobile-1 {
+        height: 12vh;
+        width: 100%;
+        background-image: linear-gradient(to left, #ff3300, #ff7700);
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 7.0vw;
+        font-weight: bold;
+      }
+      .the-synastry-compendium-mobile-1 a {
+        text-decoration: none;
+        color: #ffffff;
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+      .the-synastry-compendium-mobile-2 {
+        height: 50vh;
+        width: 100%;
+        background-image: url("the-synastry-compendium.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 110%;
+        border: none;
+      }
+      .the-synastry-compendium-mobile-3 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 400;
+      }
+      .the-synastry-compendium-mobile-3 p {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .the-synastry-compendium-mobile-4 {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 444;
+        text-align: center;
+      }
+      .the-synastry-compendium-mobile-4 a {
+        text-decoration: none;
+        color: #000000;
+        padding-left: 6px;
+      }
+      .the-synastry-compendium-mobile-4 img {
+        height: 66%;
+      }
+      .the-synastry-compendium-mobile-4-1 {
+        height: 100%;
+        width: 5%;
+      }
+      .the-synastry-compendium-mobile-4-2 {
+        height: 100%;
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .the-synastry-compendium-mobile-4-3 {
+        height: 100%;
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .the-synastry-compendium-mobile-4-4 {
+        height: 100%;
+        width: 5%;
+      }
+      /* Memberships mobile. */
+      .memberships-mobile-1 {
+        height: 12vh;
+        width: 100%;
+        background-image: linear-gradient(to right, #ff3300, #ff7700);
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 8.8vw;
+        font-weight: bold;
+      }
+      .memberships-mobile-1 a {
+        text-decoration: none;
+        color: #ffffff;
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+      .memberships-mobile-2 {
+        height: 50vh;
+        width: 100%;
+        background-image: url("memberships.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 110%;
+        border: none;
+      }
+      .memberships-mobile-3 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 400;
+      }
+      .memberships-mobile-3 p {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .memberships-mobile-4 {
+        height: 16vh;
+        width: 100%;
+        display: flex;
+      }
+      .memberships-mobile-4-1 {
+        height: 100%;
+        width: 35%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+      }
+      .memberships-mobile-4-1 img {
+        height: 95%;
+      }
+      .memberships-mobile-4-2 {
+        height: 100%;
+        width: 65%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+      }
+      .memberships-mobile-4-2 img {
+        height: 66%;
+      }
+      .memberships-mobile-5 {
+        height: 16vh;
+        width: 100%;
+        display: flex;
+      }
+      .memberships-mobile-5-1 {
+        height: 100%;
+        width: 35%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+      }
+      .memberships-mobile-5-1 img {
+        height: 95%;
+      }
+      .memberships-mobile-5-2 {
+        height: 100%;
+        width: 65%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+      }
+      .memberships-mobile-5-2 img {
+        height: 66%;
+      }
+      /* Charts mobile. */
+      .charts-mobile-1 {
+        height: 12vh;
+        width: 100%;
+        background-image: linear-gradient(to left, #ff3300, #ff7700);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 8.8vw;
+        font-weight: bold;
+      }
+      .charts-mobile-1 a {
+        text-decoration: none;
+        color: #ffffff;
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+      .charts-mobile-2 {
+        height: 50vh;
+        width: 100%;
+        background-image: url("charts.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 120%;
+        border: none;
+      }
+      .charts-mobile-3 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 400;
+      }
+      .charts-mobile-3 p {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .charts-mobile-4 {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 7.0vw;
+        font-weight: 444;
+        text-align: center;
+      }
+      .charts-mobile-4 a {
+        text-decoration: none;
+        color: #000000;
+      }
+      .charts-mobile-4 img {
+        height: 100%;
+        padding-left: 15px;
+      }
+      .charts-mobile-5 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 400;
+      }
+      .charts-mobile-5 p {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .charts-mobile-6 {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 7.0vw;
+        font-weight: 444;
+        text-align: center;
+      }
+      .charts-mobile-6 a {
+        text-decoration: none;
+        color: #000000;
+      }
+      .charts-mobile-6 img {
+        height: 100%;
+        padding-left: 15px;
+      }
+      .charts-mobile-7 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 400;
+      }
+      .charts-mobile-7 p {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      /* Reports mobile. */
+      .reports-mobile-1 {
+        height: 12vh;
+        width: 100%;
+        background-image: linear-gradient(to right, #ff3300, #ff7700);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 8.8vw;
+        font-weight: bold;
+      }
+      .reports-mobile-1 a {
+        text-decoration: none;
+        color: #ffffff;
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+      .reports-mobile-2 {
+        height: 60vh;
+        width: 100%;
+        background-image: url("reports.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 130%;
+        border: none;
+      }
+      .reports-mobile-3 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 400;
+      }
+      .reports-mobile-3 p {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .reports-mobile-4 {
+        height: 15vh;
+        width: 100%;
+        display: flex;
+      }
+      .reports-mobile-4-1 {
+        height: 100%;
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 6.6vw;
+        font-weight: 444;
+        text-align: center;
+      }
+      .reports-mobile-4-1 a {
+        text-decoration: none;
+        color: #000000;
+      }
+      .reports-mobile-4-2 {
+        height: 100%;
+        width: 30%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+      }
+      .reports-mobile-4-2 img {
+        width: 90%;
+      }
+      .reports-mobile-5 {
+        height: 15vh;
+        width: 100%;
+        display: flex;
+      }
+      .reports-mobile-5-2 {
+        height: 100%;
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 6.6vw;
+        font-weight: 444;
+        text-align: center;
+      }
+      .reports-mobile-5-2 a {
+        text-decoration: none;
+        color: #000000;
+      }
+      .reports-mobile-5-1 {
+        height: 100%;
+        width: 30%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+      }
+      .reports-mobile-5-1 img {
+        width: 90%;
+      }
+      /* Media mobile. */
+      .media-mobile-1 {
+        height: 12vh;
+        width: 100%;
+        background-image: linear-gradient(to left, #ff3300, #ff7700);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 8.8vw;
+        font-weight: bold;
+      }
+      .media-mobile-1 a {
+        text-decoration: none;
+        color: #ffffff;
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+      .media-mobile-2 {
+        height: 60vh;
+        width: 100%;
+        background-image: url("media.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 130%;
+        border: none;
+      }
+      .media-mobile-3 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 400;
+      }
+      .media-mobile-3 p {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .media-mobile-4 {
+        height: 12vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .media-mobile-4 img {
+        height: 55%;
+        padding-left: 6px;
+        padding-right: 6px;
+      }
+      .media-mobile-5 {
+        height: 8vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 7.0vw;
+        font-weight: 444;
+        text-align: center;
+      }
+      .media-mobile-5 a {
+        text-decoration: none;
+        color: #000000;
+      }
+      .media-mobile-6 {
+        height: 8vh;
+        width: 100%;
+        display: flex;
+      }
+      .media-mobile-6-1 {
+        height: 100%;
+        width: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .media-mobile-6-1 img {
+        width: 40%;
+      }
+      .media-mobile-6-2 {
+        height: 100%;
+        width: 85%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 444;
+        text-align: center;
+      }
+      .media-mobile-6-2 a {
+        text-decoration: none;
+        color: #000000;
+      }
+      /* Popular Astrology mobile. */
+      .popular-astrology-mobile-1 {
+        height: 12vh;
+        width: 100%;
+        background-image: linear-gradient(to right, #ff3300, #ff7700);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 8.8vw;
+        font-weight: bold;
+      }
+      .popular-astrology-mobile-1 a {
+        text-decoration: none;
+        color: #ffffff;
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+      .popular-astrology-mobile-2 {
+        height: 60vh;
+        width: 100%;
+        background-image: url("popular-astrology.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 130%;
+        border: none;
+      }
+      .popular-astrology-mobile-3 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 400;
+      }
+      .popular-astrology-mobile-3 a {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .popular-astrology-mobile-4 {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+      }
+      .popular-astrology-mobile-4-1 {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 444;
+      }
+      .popular-astrology-mobile-4-1 a {
+        text-decoration: none;
+        color: #000000;
+      }
+      .popular-astrology-mobile-4-1 img {
+        height: 60%;
+        padding-left: 6px;
+      }
+      .popular-astrology-mobile-4-2 {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 444;
+      }
+      .popular-astrology-mobile-4-2 a {
+        text-decoration: none;
+        color: #000000;
+      }
+      .popular-astrology-mobile-4-2 img {
+        height: 60%;
+        padding-left: 6px;
+      }
+      .popular-astrology-mobile-5 {
+        height: 10vh;
+        width: 100%;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .popular-astrology-mobile-5 a {
+        text-decoration: none;
+        color: #000000;
+      }
+      .popular-astrology-mobile-5 img {
+        height: 60%;
+        padding-right: 6px;
+      }
+      .popular-astrology-mobile-6 {
+        height: 10vh;
+        width: 100%;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .popular-astrology-mobile-6 a {
+        text-decoration: none;
+        color: #000000;
+      }
+      .popular-astrology-mobile-6 img {
+        height: 60%;
+        padding-right: 12px;
+      }
+      /* Account mobile. */
+      .account-mobile-1 {
+        height: 12vh;
+        width: 100%;
+        background-image: linear-gradient(to left, #ff3300, #ff7700);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 8.8vw;
+        font-weight: bold;
+      }
+      .account-mobile-1 a {
+        text-decoration: none;
+        color: #ffffff;
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+      .account-mobile-2 {
+        height: 60vh;
+        width: 100%;
+        background-image: url("account.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 130%;
+        border: none;
+      }
+      .account-mobile-3 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 400;
+      }
+      .account-mobile-3 p {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .account-mobile-4 {
+        height: 15vh;
+        width: 100%;
+        display: flex;
+      }
+      .account-mobile-4-1 {
+        height: 100%;
+        width: 47.5%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .account-mobile-4-1 button {
+        height: 49%;
+        width: 88%;
+        background-image: linear-gradient(to left, #ff3300, #ff7700);
+        border: none;
+        color: #ffffff;
+        font-family: Bahnschrift;
+        font-size: 7.0vw;
+        font-weight: 444;
+        cursor: pointer;
+        box-shadow: 0px 0px 6px #000000;
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+      .account-mobile-4-2 {
+        height: 100%;
+        width: 5%;
+      }
+      .account-mobile-4-3 {
+        height: 100%;
+        width: 47.5%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .account-mobile-4-3 button {
+        height: 49%;
+        width: 88%;
+        background-image: linear-gradient(to right, #ff3300, #ff7700);
+        border: none;
+        color: #ffffff;
+        font-family: Bahnschrift;
+        font-size: 7.0vw;
+        font-weight: 444;
+        cursor: pointer;
+        box-shadow: 0px 0px 6px #000000;
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+      .account-mobile-5 {
+        height: 6vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Bahnschrift;
+        font-size: 5.5vw;
+        font-weight: 400;
+      }
+      .account-mobile-6 {
+        height: 12vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 6.6vw;
+        font-weight: 444;
+        text-align: center;
+      }
+      .account-mobile-6 a {
+        text-decoration: none;
+        color: #000000;
+      }
+      .account-mobile-6 img {
+        height: 77%;
+        padding-left: 15px;
+      }
+      .account-mobile-7 {
+        height: 12vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Bahnschrift;
+        font-size: 6.6vw;
+        font-weight: 444;
+        text-align: center;
+      }
+      .account-mobile-7 a {
+        text-decoration: none;
+        color: #000000;
+      }
+      .account-mobile-7 img {
+        height: 77%;
+        padding-right: 15px;
+      }
+      /* House impact glyph. */
+      .house-impact-glyph {
+        height: 15vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .house-impact-glyph img {
+        height: 150%;
+      }
+      /* Bottom Navigation mobile. */
+      .bottom-navigation-mobile-1 {
+        width: 100%;
+        font-family: Bahnschrift;
+        font-size: 4.4vw;
+        font-weight: 444;
+      }
+      .bottom-navigation-mobile-1 li {
+        list-style: none;
+      }
+      .bottom-navigation-mobile-1 a {
+        text-decoration: none;
+        color: #000000;
+      }
+      /* Pre-registration and full release countdowns, social links, copyright. */
+      .pre-registration-countdown {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Bahnschrift;
+        font-size: 3.3vw;
+        font-weight: 444;
+      }
+      .full-release-countdown {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Bahnschrift;
+        font-size: 3.3vw;
+        font-weight: 444;
+      }
+      .social-links {
+        height: 6vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .social-links img {
+        height: 77%;
+        padding-left: 6px;
+        padding-right: 6px;
+      }
+      .copyright {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: Bahnschrift;
+        font-size: 3.3vw;
+        font-weight: 444;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-navigation" id="w">
+      <div class="top-navigation-banner-logo">
+        <a href="home.html"> <img src="trine-banner-logo.png" alt="Trine Banner Logo"> </a>
+      </div>
+      <div class="top-navigation-links">
+        <img src="top-navigation-mobile.png" alt="" onclick="topNavigation()">
+      </div>
+    </div>
+    <div class="top-spacer">
+    </div>
+
+    <div class="navigation" id="q">
+      <div class="navigation-link-top">
+        <div class="navigation-link-top-1">
+          <a href="our-app.html">Our App</a>
+        </div>
+        <div class="navigation-link-top-2">
+          <img src="top-navigation-x.png" alt="" onclick="topNavigationClose()">
+        </div>
+      </div>
+      <div class="navigation-link">
+        <a href="about.html">About</a>
+      </div>
+      <div class="navigation-link">
+        <a href="the-synastry-compendium.html">The Synastry Compendium</a>
+      </div>
+      <div class="navigation-link">
+        <a href="memberships.html">Memberships</a>
+      </div>
+      <div class="navigation-link">
+        <a href="charts.html">Charts</a>
+      </div>
+      <div class="navigation-link">
+        <a href="reports.html">Reports</a>
+      </div>
+      <div class="navigation-link">
+        <a href="media.html">Media</a>
+      </div>
+      <div class="navigation-link">
+        <a href="popular-astrology.html">Popular Astrology</a>
+      </div>
+      <div class="navigation-link">
+        <a href="account.html">Account</a>
+      </div>
+      <div class="navigation-link">
+
+      </div>
+      <div class="navigation-download">
+        <img src="google-play-store-badge.png" alt="">
+      </div>
+      <div class="navigation-social">
+        <img src="custom-instagram-icon-white-glow.png" alt="">
+        <img src="custom-facebook-icon-white-glow.png" alt="">
+        <img src="custom-pinterest-icon-white-glow.png" alt="">
+        <img src="custom-tumblr-icon-white-glow.png" alt="">
+        <img src="custom-twitter-icon-white-glow.png" alt="">
+      </div>
+    </div>
+
+    <div class="slogan-statement-sign-up-log-in-glyph-mobile">
+      <div class="slogan-statement-sign-up-log-in-glyph-mobile-1">
+
+      </div>
+      <div class="slogan-statement-sign-up-log-in-glyph-mobile-2">
+        <div class="slogan-statement-sign-up-log-in-glyph-mobile-2-1">
+          Matches Made<br>In Heaven
+        </div>
+        <div class="slogan-statement-sign-up-log-in-glyph-mobile-2-2">
+          <div class="slogan-statement-sign-up-log-in-glyph-mobile-2-2-1">
+            <button type="button" name="button">Sign Up</button>
+          </div>
+          <div class="slogan-statement-sign-up-log-in-glyph-mobile-2-2-2">
+
+          </div>
+          <div class="slogan-statement-sign-up-log-in-glyph-mobile-2-2-3">
+            <button type="button" name="button">Log In</button>
+          </div>
+        </div>
+        <div class="slogan-statement-sign-up-log-in-glyph-mobile-2-3">
+          <p>We're taking a more conscious approach to relationships using
+          the science of astrology.</p>
+        </div>
+      </div>
+      <div class="slogan-statement-sign-up-log-in-glyph-mobile-3">
+
+      </div>
+    </div>
+
+    <div class="our-app-mobile-1">
+      <a href="our-app.html">Our App</a>
+    </div>
+    <div class="our-app-mobile-2">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="our-app-mobile-3">
+      <p>Access the immersive mobile experience of Trine Dating through our app,
+      coming Spring 2023 to the Google Play Store and App Store.</p>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="our-app-mobile-4">
+      <img src="google-play-store-badge.png" alt="" id="gpsb">
+      <img src="app-store-badge.png" alt="" id="asb">
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="our-app-mobile-5">
+      <p>Pre-registration available this December 23, with full release on March 23.
+      Sign up and be one of our cherished premier members.</p>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+
+    <div class="about-mobile-1">
+      <a href="about.html">About</a>
+    </div>
+    <div class="about-mobile-2">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="about-mobile-3">
+      <p>A dating experience for the new age. We use the power and wisdom of astrology
+      to divine great matches for our users. Learn more, see how it works and preview
+      features. Bringing people together is what we do best.</p>
+    </div>
+    <div class="about-mobile-4">
+      <div class="about-mobile-4-1">
+
+      </div>
+      <div class="about-mobile-4-2">
+        <a href="card-browse.html">Card<br>Browse</a>
+        <img src="card-browse-symbol.png" alt="">
+      </div>
+      <div class="about-mobile-4-3">
+        <a href="affinity-system.html">Affinity<br>System</a>
+        <img src="affinity-system-symbol.png" alt="">
+      </div>
+      <div class="about-mobile-4-4">
+
+      </div>
+    </div>
+    <div class="about-mobile-4">
+      <div class="about-mobile-4-1">
+
+      </div>
+      <div class="about-mobile-4-2">
+        <a href="expanded-browse.html">Expanded<br>Browse</a>
+        <img src="expanded-browse-symbol.png" alt="">
+      </div>
+      <div class="about-mobile-4-3">
+        <a href="aspect-analysis.html">Aspect<br>Analysis</a>
+        <img src="aspect-analysis-symbol.png" alt="Learn about the Aspect Analysis
+        available through Trine Dating.">
+      </div>
+      <div class="about-mobile-4-4">
+
+      </div>
+    </div>
+    <div class="about-mobile-4">
+      <div class="about-mobile-4-1">
+
+      </div>
+      <div class="about-mobile-4-2">
+        <a href="suggested-matches.html">Suggested<br>Matches</a>
+        <img src="suggested-matches-symbol.png" alt="">
+      </div>
+      <div class="about-mobile-4-3">
+        <a href="search-filters.html">Search<br>Filters</a>
+        <img src="search-filters-symbol.png" alt="">
+      </div>
+      <div class="about-mobile-4-4">
+
+      </div>
+    </div>
+    <div class="about-mobile-4">
+      <div class="about-mobile-4-1">
+
+      </div>
+      <div class="about-mobile-4-2">
+        <a href="resonance-reporting.html">Resonance<br>Reporting</a>
+        <img src="resonance-reporting-symbol.png" alt="Learn about the Resonance
+        Reporting feature available through Trine Dating.">
+      </div>
+      <div class="about-mobile-4-3">
+        <a href="aspects-in-action.html">Aspects<br>in Action</a>
+        <img src="aspects-in-action-symbol.png" alt="">
+      </div>
+      <div class="about-mobile-4-4">
+
+      </div>
+    </div>
+    <div class="about-mobile-4">
+      <div class="about-mobile-4-1">
+
+      </div>
+      <div class="about-mobile-4-2">
+        <a href="moon-transits.html">Moon<br>Transits</a>
+        <img src="moon-transits-symbol.png" alt="">
+      </div>
+      <div class="about-mobile-4-3">
+        <a href="feature.html">Feature<br>Feature</a>
+        <img src="feature-symbol.png" alt="">
+      </div>
+      <div class="about-mobile-4-4">
+
+      </div>
+    </div>
+    <div class="about-mobile-4">
+      <div class="about-mobile-4-1">
+
+      </div>
+      <div class="about-mobile-4-2">
+        <a href="feature.html">Feature<br>Feature</a>
+        <img src="feature-symbol.png" alt="">
+      </div>
+      <div class="about-mobile-4-3">
+        <a href="feature.html">Feature<br>Feature</a>
+        <img src="feature-symbol.png" alt="">
+      </div>
+      <div class="about-mobile-4-4">
+
+      </div>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+
+    <div class="the-synastry-compendium-mobile-1">
+      <a href="the-synastry-compendium.html">The Synastry Compendium</a>
+    </div>
+    <div class="the-synastry-compendium-mobile-2">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="the-synastry-compendium-mobile-3">
+      <p>Learn about synastry aspects and their significance in the most comprehensive
+      archive available, compiled by the team of astrologers behind Trine Dating.</p>
+    </div>
+    <div class="the-synastry-compendium-mobile-4">
+      <div class="the-synastry-compendium-mobile-4-1">
+
+      </div>
+      <div class="the-synastry-compendium-mobile-4-2">
+        <img src="sun-symbol-shadow.png" alt="">
+        <a href="sun.html">Sun</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-3">
+        <img src="lilith-symbol-shadow.png" alt="">
+        <a href="lilith.html">Lilith</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-4">
+
+      </div>
+    </div>
+    <div class="the-synastry-compendium-mobile-4">
+      <div class="the-synastry-compendium-mobile-4-1">
+
+      </div>
+      <div class="the-synastry-compendium-mobile-4-2">
+        <img src="jupiter-symbol-shadow.png" alt="">
+        <a href="jupiter.html">Jupiter</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-3">
+        <img src="mercury-symbol-shadow.png" alt="">
+        <a href="mercury.html">Mercury</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-4">
+
+      </div>
+    </div>
+    <div class="the-synastry-compendium-mobile-4">
+      <div class="the-synastry-compendium-mobile-4-1">
+
+      </div>
+      <div class="the-synastry-compendium-mobile-4-2">
+        <img src="ascendant-symbol-shadow.png" alt="">
+        <a href="ascendant.html">Ascendant</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-3">
+        <img src="saturn-symbol-shadow.png" alt="">
+        <a href="saturn.html">Saturn</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-4">
+
+      </div>
+    </div>
+    <div class="the-synastry-compendium-mobile-4">
+      <div class="the-synastry-compendium-mobile-4-1">
+
+      </div>
+      <div class="the-synastry-compendium-mobile-4-2">
+        <img src="venus-symbol-shadow.png" alt="">
+        <a href="venus.html">Venus</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-3">
+        <img src="nadir-symbol-shadow.png" alt="">
+        <a href="nadir.html">Nadir</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-4">
+
+      </div>
+    </div>
+    <div class="the-synastry-compendium-mobile-4">
+      <div class="the-synastry-compendium-mobile-4-1">
+
+      </div>
+      <div class="the-synastry-compendium-mobile-4-2">
+        <img src="chiron-symbol-shadow.png" alt="">
+        <a href="chiron.html">Chiron</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-3">
+        <img src="moon-symbol-shadow.png" alt="">
+        <a href="moon.html">Moon</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-4">
+
+      </div>
+    </div>
+    <div class="the-synastry-compendium-mobile-4">
+      <div class="the-synastry-compendium-mobile-4-1">
+
+      </div>
+      <div class="the-synastry-compendium-mobile-4-2">
+        <img src="descendant-symbol-shadow.png" alt="">
+        <a href="descendant.html">Descendant</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-3">
+        <img src="uranus-symbol-shadow.png" alt="">
+        <a href="uranus.html">Uranus</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-4">
+
+      </div>
+    </div>
+    <div class="the-synastry-compendium-mobile-4">
+      <div class="the-synastry-compendium-mobile-4-1">
+
+      </div>
+      <div class="the-synastry-compendium-mobile-4-2">
+        <img src="north-node-symbol-shadow.png" alt="">
+        <a href="north-node.html">North Node</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-3">
+        <img src="midheaven-symbol-shadow.png" alt="">
+        <a href="midheaven.html">Midheaven</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-4">
+
+      </div>
+    </div>
+    <div class="the-synastry-compendium-mobile-4">
+      <div class="the-synastry-compendium-mobile-4-1">
+
+      </div>
+      <div class="the-synastry-compendium-mobile-4-2">
+        <img src="neptune-symbol-shadow.png" alt="">
+        <a href="neptune.html">Neptune</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-3">
+        <img src="south-node-symbol-shadow.png" alt="">
+        <a href="south-node.html">South Node</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-4">
+
+      </div>
+    </div>
+    <div class="the-synastry-compendium-mobile-4">
+      <div class="the-synastry-compendium-mobile-4-1">
+
+      </div>
+      <div class="the-synastry-compendium-mobile-4-2">
+        <img src="mars-symbol-shadow.png" alt="">
+        <a href="mars.html">Mars</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-3">
+        <img src="pluto-symbol-shadow.png" alt="">
+        <a href="pluto.html">Pluto</a>
+      </div>
+      <div class="the-synastry-compendium-mobile-4-4">
+
+      </div>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+
+    <div class="memberships-mobile-1">
+      <a href="memberships.html">Memberships</a>
+    </div>
+    <div class="memberships-mobile-2">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="memberships-mobile-3">
+      <p>Upgrade to a premium membership to access a wide range of exclusive benefits.
+      We offer three subscription tiers: Solar, Lunar, and Venusian, as well as trial
+      periods so you can give it a go for free.</p>
+    </div>
+    <div class="memberships-mobile-4">
+      <div class="memberships-mobile-4-1">
+        <img src="trine-solar-icon.png" alt="">
+      </div>
+      <div class="memberships-mobile-4-2">
+        <img src="trine-solar-badge.png" alt="">
+      </div>
+    </div>
+    <div class="memberships-mobile-5">
+      <div class="memberships-mobile-5-2">
+        <img src="trine-lunar-badge.png" alt="">
+      </div>
+      <div class="memberships-mobile-5-1">
+        <img src="trine-lunar-icon.png" alt="">
+      </div>
+    </div>
+    <div class="memberships-mobile-4">
+      <div class="memberships-mobile-4-1">
+        <img src="trine-venusian-icon.png" alt="">
+      </div>
+      <div class="memberships-mobile-4-2">
+        <img src="trine-venusian-badge.png" alt="">
+      </div>
+    </div>
+    <div class="spacer-3">
+
+    </div>
+
+    <div class="charts-mobile-1">
+      <a href="charts.html">Charts</a>
+    </div>
+    <div class="charts-mobile-2">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="charts-mobile-3">
+      <p>Whether you're learning about your unique self or getting a clearer picture
+      of a relationship, you can use our chart generators to create engaging and informative
+      blueprints of the sky.</p>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="charts-mobile-4">
+      <a href="synastry-chart.html">Synastry Chart<br>Generator</a>
+      <img src="synastry-chart-graphic.png" alt="">
+    </div>
+    <div class="charts-mobile-5">
+      <p>Synastry is all about the comparison between energies, observing how individual
+      personalities interact, and determining complementary or detrimental effects.</p>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="charts-mobile-6">
+      <a href="natal-chart.html">Natal Chart<br>Generator</a>
+      <img src="natal-chart-graphic.png" alt="">
+    </div>
+    <div class="charts-mobile-7">
+      <p>Your natal chart is a map of the zodiac at the moment you were born, a guide
+      helping you understand the synchronistic signatures of your own personality
+      and potential impact.</p>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="charts-mobile-4">
+      <a href="composite-chart.html">Composite Chart<br>Generator</a>
+      <img src="composite-chart-graphic.png" alt="">
+    </div>
+    <div class="charts-mobile-5">
+      <p>Composite is all about interpreting the merging of energies, deriving harmonious
+      or disharmonious middlegrounds between the charts of two individuals.</p>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+
+    <div class="reports-mobile-1">
+      <a href="reports.html">Reports</a>
+    </div>
+    <div class="reports-mobile-2">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="reports-mobile-3">
+      <p>We offer a variety of dynamically generated reports, with more on the way.
+      Some focus on the analysis of compatibility while others are catered more towards
+      understanding your individuality.</p>
+    </div>
+    <div class="reports-mobile-4">
+      <div class="reports-mobile-4-1">
+        <a href="compatibility-report-with-synastry.html">Compatibility Report<br>with Synastry</a>
+      </div>
+      <div class="reports-mobile-4-2">
+        <img src="compatibility-report-with-synastry.png" alt="">
+      </div>
+    </div>
+    <div class="reports-mobile-5">
+      <div class="reports-mobile-5-1">
+        <img src="personal-natal-report.png" alt="">
+      </div>
+      <div class="reports-mobile-5-2">
+        <a href="personal-natal-report.html">Personal<br>Natal<br>Report</a>
+      </div>
+    </div>
+    <div class="reports-mobile-4">
+      <div class="reports-mobile-4-1">
+        <a href="compatibility-report-with-composite.html">Compatibility Report<br>with Composite</a>
+      </div>
+      <div class="reports-mobile-4-2">
+        <img src="compatibility-report-with-composite.png" alt="">
+      </div>
+    </div>
+    <div class="reports-mobile-5">
+      <div class="reports-mobile-5-1">
+        <img src="personal-cartomancy-report.png" alt="">
+      </div>
+      <div class="reports-mobile-5-2">
+        <a href="personal-cartomancy-report.html">Personal<br>Cartomancy<br>Report</a>
+      </div>
+    </div>
+    <div class="reports-mobile-4">
+      <div class="reports-mobile-4-1">
+        <a href="compatibility-report-with-cartomancy.html">Compatibility Report<br>with Cartomancy</a>
+      </div>
+      <div class="reports-mobile-4-2">
+        <img src="compatibility-report-with-cartomancy.png" alt="">
+      </div>
+    </div>
+    <div class="reports-mobile-5">
+      <div class="reports-mobile-5-1">
+        <img src="personal-confrontation-style-microreport.png" alt="">
+      </div>
+      <div class="reports-mobile-5-2">
+        <a href="personal-confrontation-style-microreport.html">Personal<br>Confrontation Style<br>Report</a>
+      </div>
+    </div>
+    <div class="spacer-3">
+
+    </div>
+
+    <div class="media-mobile-1">
+      <a href="media.html">Media</a>
+    </div>
+    <div class="media-mobile-2">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="media-mobile-3">
+      <p>Follow our social channels to keep up with all the latest content and news
+      from Trine Dating. You can find us on Instagram, Twitter, Facebook, Tumblr and
+      Pinterest, with more platforms to come.</p>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="media-mobile-4">
+      <img src="custom-instagram-icon.png" alt="">
+      <img src="custom-twitter-icon.png" alt="">
+      <img src="custom-facebook-icon.png" alt="">
+      <img src="custom-tumblr-icon.png" alt="">
+      <img src="custom-pinterest-icon.png" alt="">
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="media-mobile-5">
+      <a href="latest-posts.html">Latest Posts</a>
+    </div>
+    <div class="media-mobile-6">
+      <div class="media-mobile-6-1">
+        <img src="bullet-point.png" alt="">
+      </div>
+      <div class="media-mobile-6-2">
+        <a href="post.html">Ascendant in Pisces Conjunct<br>North Node in Pisces</a>
+      </div>
+    </div>
+    <div class="media-mobile-6">
+      <div class="media-mobile-6-1">
+        <img src="bullet-point.png" alt="">
+      </div>
+      <div class="media-mobile-6-2">
+        <a href="post.html">Ascendant in Aries Conjunct<br>North Node in Pisces</a>
+      </div>
+    </div>
+    <div class="media-mobile-6">
+      <div class="media-mobile-6-1">
+        <img src="bullet-point.png" alt="">
+      </div>
+      <div class="media-mobile-6-2">
+        <a href="post.html">Ascendant in Aquarius Conjunct<br>North Node in Pisces</a>
+      </div>
+    </div>
+    <div class="spacer-3">
+
+    </div>
+
+    <div class="popular-astrology-mobile-1">
+      <a href="popular-astrology.html">Popular Astrology</a>
+    </div>
+    <div class="popular-astrology-mobile-2">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="popular-astrology-mobile-3">
+      <p>Prominent personalities make great subjects of study for seeing the archetypes
+      of astrology in action, whether through observing their character, the projects they
+      pursue, or the relationships they share.</p>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="popular-astrology-mobile-4">
+      <div class="popular-astrology-mobile-4-1">
+        <a href="aries-popular-astrology.html">Aries</a>
+        <img src="aries-gradient-symbol.png" alt="">
+      </div>
+      <div class="popular-astrology-mobile-4-2">
+        <a href="taurus-popular-astrology.html">Taurus</a>
+        <img src="taurus-gradient-symbol.png" alt="">
+      </div>
+    </div>
+    <div class="popular-astrology-mobile-4">
+      <div class="popular-astrology-mobile-4-1">
+        <a href="gemini-popular-astrology.html">Gemini</a>
+        <img src="gemini-gradient-symbol.png" alt="">
+      </div>
+      <div class="popular-astrology-mobile-4-2">
+        <a href="cancer-popular-astrology.html">Cancer</a>
+        <img src="cancer-gradient-symbol.png" alt="">
+      </div>
+    </div>
+    <div class="popular-astrology-mobile-4">
+      <div class="popular-astrology-mobile-4-1">
+        <a href="leo-popular-astrology.html">Leo</a>
+        <img src="leo-gradient-symbol.png" alt="">
+      </div>
+      <div class="popular-astrology-mobile-4-2">
+        <a href="virgo-popular-astrology.html">Virgo</a>
+        <img src="virgo-gradient-symbol.png" alt="">
+      </div>
+    </div>
+    <div class="popular-astrology-mobile-4">
+      <div class="popular-astrology-mobile-4-1">
+        <a href="libra-popular-astrology.html">Libra</a>
+        <img src="libra-gradient-symbol.png" alt="">
+      </div>
+      <div class="popular-astrology-mobile-4-2">
+        <a href="scorpio-popular-astrology.html">Scorpio</a>
+        <img src="scorpio-gradient-symbol.png" alt="">
+      </div>
+    </div>
+    <div class="popular-astrology-mobile-4">
+      <div class="popular-astrology-mobile-4-1">
+        <a href="sagittarius-popular-astrology.html">Sagittarius</a>
+        <img src="sagittarius-gradient-symbol.png" alt="">
+      </div>
+      <div class="popular-astrology-mobile-4-2">
+        <a href="capricorn-popular-astrology.html">Capricorn</a>
+        <img src="capricorn-gradient-symbol.png" alt="">
+      </div>
+    </div>
+    <div class="popular-astrology-mobile-4">
+      <div class="popular-astrology-mobile-4-1">
+        <a href="aquarius-popular-astrology.html">Aquarius</a>
+        <img src="aquarius-gradient-symbol.png" alt="">
+      </div>
+      <div class="popular-astrology-mobile-4-2">
+        <a href="pisces-popular-astrology.html">Pisces</a>
+        <img src="pisces-gradient-symbol.png" alt="">
+      </div>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="popular-astrology-mobile-5">
+      <img src="search-by-placement.png" alt="">
+      <a href="search-by-placement.html">Search by Placement</a>
+    </div>
+    <div class="popular-astrology-mobile-6">
+      <img src="professional-index.png" alt="">
+      <a href="professional-index.html">Professional Index</a>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+
+    <div class="account-mobile-1">
+      <a href="account.html">Account</a>
+    </div>
+    <div class="account-mobile-2">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="account-mobile-3">
+      <p>Create an account and begin your journey with Trine. Help us revolutionize
+      the modern take on relationships and join us at the forefront of the burgeoning
+      field of mobile astrology.</p>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="account-mobile-4">
+      <div class="account-mobile-4-1">
+        <button type="button" name="button">Sign Up</button>
+      </div>
+      <div class="account-mobile-4-2">
+
+      </div>
+      <div class="account-mobile-4-3">
+        <button type="button" name="button">Log In</button>
+      </div>
+    </div>
+    <div class="account-mobile-5">
+      <p><span>0</span> members to date.</p>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="account-mobile-6">
+      <a href="share-with-friends.html">Share with<br>Friends</a>
+      <img src="share-symbol.png" alt="">
+    </div>
+    <div class="account-mobile-7">
+      <img src="newsletter-symbol.png" alt="">
+      <a href="trine-newsletter.html">Subscribe to our<br>Newsletter</a>
+    </div>
+    <div class="account-mobile-6">
+      <a href="the-trine-network.html">The Trine<br>Network</a>
+      <img src="network-symbol.png" alt="">
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+
+    <div class="spacer-2-border">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="house-impact-glyph">
+      <img src="house-impact-glyph.png" alt="">
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+
+    <div class="spacer-2-border">
+
+    </div>
+    <div class="bottom-navigation-mobile-1">
+      <ul>
+        <li> <a href="safety-and-security.html" style="font-size: 5.0vw;">Safety and Security</a> </li>
+        <li> <a href="community-guidelines.html">Community Guidelines</a> </li>
+        <li> <a href="safe-use.html">Safe Use</a> </li>
+        <li> <a href="secure-use.html">Secure Use</a> </li>
+      </ul>
+      <ul>
+        <li> <a href="legal.html" style="font-size: 5.0vw;">Legal</a> </li>
+        <li> <a href="privacy-policy.html">Privacy Policy</a> </li>
+        <li> <a href="terms-of-service.html">Terms of Service</a> </li>
+        <li> <a href="cookies-policy.html">Cookies Policy</a> </li>
+        <li> <a href="intellectual-property.html">Intellectual Property</a> </li>
+      </ul>
+      <ul>
+        <li> <a href="corporate.html" style="font-size: 5.0vw;">Corporate</a> </li>
+        <li> <a href="our-team.html">Our Team</a> </li>
+        <li> <a href="career-opportunities.html">Career Opportunities</a> </li>
+        <li> <a href="investment-inquiries.html">Investment Inquiries</a> </li>
+      </ul>
+      <ul>
+        <li> <a href="social-links.html" style="font-size: 5.0vw;">Social Links</a> </li>
+        <li> <a href="https://www.instagram.com/trine.app/">Instagram</a> </li>
+        <li> <a href="https://twitter.com/trine_app">Twitter</a> </li>
+        <li> <a href="https://www.facebook.com/Trine-102694105333411">Facebook</a> </li>
+        <li> <a href="https://www.tumblr.com/blog/trineapp">Tumblr</a> </li>
+        <li> <a href="https://www.pinterest.ca/trine_app/">Pinterest</a> </li>
+      </ul>
+      <ul>
+        <li> <a href="support.html" style="font-size: 5.0vw;">Support</a> </li>
+        <li> <a href="faq.html">FAQ</a> </li>
+        <li> <a href="contact-support.html">Contact Support</a> </li>
+        <li> <a href="general-inquiries.html">General Inquiries</a> </li>
+        <li> <a href="feedback-and-suggestions.html">Feedback and Suggestions</a> </li>
+      </ul>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+
+    <div class="spacer-2-border">
+
+    </div>
+    <div class="pre-registration-countdown">
+      <p>Pre-registration links available in <span id="preRegistrationCountDown"></span></p>
+    </div>
+    <div class="full-release-countdown">
+      <p>Full release in <span id="fullReleaseCountDown"></span></p>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="social-links">
+      <img src="custom-instagram-icon.png" alt="">
+      <img src="custom-twitter-icon.png" alt="">
+      <img src="custom-facebook-icon.png" alt="">
+      <img src="custom-tumblr-icon.png" alt="">
+      <img src="custom-pinterest-icon.png" alt="">
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="copyright">
+      <p>© 2022 Venusian Media Group Ltd., LLC, All Rights Reserved</p>
+    </div>
+
+  </body>
+  <script type="text/javascript">
+    function topNavigation() {
+      document.getElementById("w").style.zIndex = "0";
+      document.getElementById("q").style.display = "inline-block";
+      document.getElementById("q").style.zIndex = "1";
+      document.getElementById("q").style.opacity = "100%";
+    }
+    function topNavigationClose() {
+      document.getElementById("q").style.opacity = "0%";
+      document.getElementById("q").style.zIndex = "0";
+      document.getElementById("q").style.display = "none";
+      document.getElementById("w").style.zIndex = "1";
+    }
+    var preRegistrationCountDown = new Date("Dec 23, 2022 15:00:00").getTime();
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = preRegistrationCountDown - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("preRegistrationCountDown").innerHTML = " " + days + ":" + hours + ":"
+      + minutes + ":" + seconds + "";
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("preRegistrationCountDown").innerHTML = "GO TIME";
+      }
+    }, 1000);
+    var fullReleaseCountDown = new Date("Mar 23, 2023 15:00:00").getTime();
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = fullReleaseCountDown - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("fullReleaseCountDown").innerHTML = " " + days + ":" + hours + ":"
+      + minutes + ":" + seconds + "";
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("fullReleaseCountDown").innerHTML = "GO TIME";
+      }
+    }, 1000);
+    _iOSDevice = !!navigator.platform.match(/iPhone|iPod|iPad/);
+    if (_iOSDevice === true) {
+      document.getElementById("asb").style.display = "flex";
+    }
+    if (_iOSDevice === false) {
+      document.getElementById("gpsb").style.display = "flex";
+    }
+  </script>
+</html>
