@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Get a first impression with card browsing. See your potential match's name, age, Sun, Moon, and Ascendant. You can also view their condensed profile.">
+    <meta itemprop="image" content="https://adamdolson.github.io/trinedatinghomemobile/item-prop.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Card Browse - About Trine Dating">
+    <meta property="og:description" content="Get a first impression with card browsing. See your potential match's name, age, Sun, Moon, and Ascendant. You can also view their condensed profile.">
+    <meta property="og:site_name" content="Trine Dating">
+    <meta property="og:url" content="https://adamdolson.github.io/trinedatinghomedesktop/card-browse.html">
+    <meta property="og:image" content="https://adamdolson.github.io/trinedatinghomemobile/item-prop.png">
+    <title>Card Browse - About Trine Dating</title>
+    <link rel="icon" href="favicon-logo.png">
+
+
+
+    <style media="screen">
+    /* Body formatting. */
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: linear-gradient(#fffde6, #ffffff, #fffde6);
+      background-repeat: no-repeat;
+    }
+    /* Font. */
+    @font-face {
+      font-family: 'Bahnschrift';
+      src: url('Bahnschrift.eot');
+      src: url('Bahnschrift.eot?#iefix') format('embedded-opentype'),
+      url('Bahnschrift.woff2') format('woff2'),
+      url('Bahnschrift.woff') format('woff'),
+      url('Bahnschrift.ttf') format('truetype'),
+      url('Bahnschrift.svg#Bahnschrift') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Roboto';
+      src: url('Roboto-Regular.eot');
+      src: url('Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+      url('Roboto-Regular.woff2') format('woff2'),
+      url('Roboto-Regular.woff') format('woff'),
+      url('Roboto-Regular.ttf') format('truetype'),
+      url('Roboto-Regular.svg#Roboto-Regular') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    /* Top navigation. */
+    .top-navigation {
+      height: 8vh;
+      position: fixed;
+      width: 100%;
+      background-image: linear-gradient(to right, #ff3300, #ff7700);
+      display: flex;
+      box-shadow: 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%), 0px 2px 4px -1px rgb(0 0 0 / 20%);
+    }
+    .top-navigation-banner-logo {
+      height: 100%;
+      width: 70%;
+    }
+    .top-navigation-banner-logo img {
+      height: 100%;
+    }
+    .top-navigation-links {
+      height: 100%;
+      width: 30%;
+      background-color: transparent;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      text-align: center;
+    }
+    .top-navigation-links img {
+      height: 100%;
+    }
+    .top-spacer {
+      height: 8vh;
+      width: 100%;
+      background-color: transparent;
+    }
+    /* Navigation links. */
+    .navigation {
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(to right, #ff3300, #ff7700);
+      display: none;
+      transition-property: opacity;
+      transition-duration: 1s;
+    }
+    .navigation-link-top {
+      height: 7%;
+      width: 100%;
+      display: flex;
+    }
+    .navigation-link-top-1 {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      background-color: transparent;
+      font-family: 'Bahnschrift';
+      font-size: 6.0vw;
+      font-weight: bold;
+    }
+    .navigation-link-top-1 a {
+      padding-left: 33px;
+      text-decoration: none;
+      color: #ffffff;
+      text-shadow: 0px 0px 2px #ffffff;
+    }
+    .navigation-link-top-2 {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      background-color: transparent;
+    }
+    .navigation-link-top-2 img {
+      height: 60%;
+      padding-right: 24px;
+    }
+    .navigation-link {
+      height: 7%;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      background-color: transparent;
+      font-family: 'Bahnschrift';
+      font-size: 6.0vw;
+      font-weight: bold;
+    }
+    .navigation-link a {
+      padding-left: 33px;
+      text-decoration: none;
+      color: #ffffff;
+      text-shadow: 0px 0px 2px #ffffff;
+    }
+    .navigation-download {
+      height: 10%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+    }
+    .navigation-download img {
+      height: 66%;
+      display: none;
+    }
+    .navigation-social {
+      height: 10%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: transparent;
+    }
+    .navigation-social img {
+      height: 60%;
+      padding-right: 3px;
+      padding-left: 3px;
+    }
+    /* Spacers. */
+    .spacer-6 {
+      height: 6vh;
+      width: 100%;
+      background-color: red;
+    }
+    .spacer-3 {
+      height: 3vh;
+      width: 100%;
+    }
+    /* App feature title */
+    .app-feature-title {
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Bahnschrift';
+      font-size: 8.8vw;
+      font-weight: bold;
+    }
+    .app-feature-title img {
+      height: 88%;
+      padding-right: 3vw;
+    }
+    /* App feature description. */
+    .app-feature-description {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Roboto';
+      font-size: 5.5vw;
+      font-weight: bold;
+      text-align: center;
+    }
+    .app-feature-description p {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    /* App feature showcase. */
+    .app-feature-showcase {
+      height: 66vh;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      overflow-x: hidden;
+    }
+    .app-feature-showcase img {
+      height: 100%;
+    }
+    .container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .cb1 {
+      animation-name: cb1;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+      animation-delay: 1.5s;
+    }
+    @keyframes cb1 {
+      from {transform: translateX(0%);}
+      to {transform: translateX(-130%);}
+    }
+    .cb2 {
+      display: none;
+      animation-name: cb2;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+      animation-delay: 0s;
+    }
+    @keyframes cb2 {
+      from {transform: translateX(130%);}
+      to {transform: translateX(0%);}
+    }
+    </style>
+  </head>
+  <body>
+    <div class="top-navigation" id="w">
+      <div class="top-navigation-banner-logo">
+        <a href="home.html"> <img src="trine-banner-logo.png" alt="Trine Banner Logo"> </a>
+      </div>
+      <div class="top-navigation-links">
+        <img src="top-navigation-mobile.png" alt="" onclick="topNavigation()">
+      </div>
+    </div>
+    <div class="top-spacer">
+    </div>
+
+    <div class="navigation" id="q">
+      <div class="navigation-link-top">
+        <div class="navigation-link-top-1">
+          <a href="our-app.html">Our App</a>
+        </div>
+        <div class="navigation-link-top-2">
+          <img src="top-navigation-x.png" alt="" onclick="topNavigationClose()">
+        </div>
+      </div>
+      <div class="navigation-link">
+        <a href="about.html">About</a>
+      </div>
+      <div class="navigation-link">
+        <a href="the-synastry-compendium.html">The Synastry Compendium</a>
+      </div>
+      <div class="navigation-link">
+        <a href="memberships.html">Memberships</a>
+      </div>
+      <div class="navigation-link">
+        <a href="charts.html">Charts</a>
+      </div>
+      <div class="navigation-link">
+        <a href="reports.html">Reports</a>
+      </div>
+      <div class="navigation-link">
+        <a href="media.html">Media</a>
+      </div>
+      <div class="navigation-link">
+        <a href="popular-astrology.html">Popular Astrology</a>
+      </div>
+      <div class="navigation-link">
+        <a href="account.html">Account</a>
+      </div>
+      <div class="navigation-link">
+
+      </div>
+      <div class="navigation-download">
+        <img src="google-play-store-badge.png" alt="" id="navgpsb" onclick="googlePlayStoreNavigation()">
+        <img src="app-store-badge.png" alt="" id="navasb" onclick="appStoreNavigation()">
+      </div>
+      <div class="navigation-social">
+        <img src="custom-instagram-icon-white-glow.png" alt="" onclick="instagramNavigation()">
+        <img src="custom-facebook-icon-white-glow.png" alt="" onclick="facebookNavigation()">
+        <img src="custom-pinterest-icon-white-glow.png" alt="" onclick="pinterestNavigation()">
+        <img src="custom-tumblr-icon-white-glow.png" alt="" onclick="tumblrNavigation()">
+        <img src="custom-twitter-icon-white-glow.png" alt="" onclick="twitterNavigation()">
+      </div>
+    </div>
+
+    <div class="spacer-3">
+
+    </div>
+
+    <div class="app-feature-title">
+      <img src="card-browse-symbol.png" alt="">
+      Card Browse
+    </div>
+
+    <div class="app-feature-description">
+      <p>Get a first impression with card browsing. See your potential match's name,
+      age, Sun, Moon, and Ascendant.</p>
+    </div>
+
+    <div class="app-feature-showcase">
+      <div class="container">
+        <img src="andrea-aries-woman-card-browse-iphone.png" alt="" class="cb1" id="cb1">
+        <img src="robert-taurus-man-card-browse-iphone.png" alt="" class="cb2" id="cb2">
+      </div>
+    </div>
+
+  </body>
+  <script type="text/javascript">
+  function byeBye1() {
+    document.getElementById("cb1").style.display = "none";
+  }
+  setTimeout(byeBye1, 2000);
+  function hello1() {
+    document.getElementById("cb2").style.display = "flex";
+  }
+  setTimeout(hello1, 2000);
+  </script>
+</html>
