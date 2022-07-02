@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Get a first impression with card browsing. See your potential match's name, age, Sun, Moon, and Ascendant. You can also view their condensed profile.">
+    <meta itemprop="image" content="https://adamdolson.github.io/trinedatinghomemobile/item-prop.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Card Browse - About Trine Dating">
+    <meta property="og:description" content="Get a first impression with card browsing. See your potential match's name, age, Sun, Moon, and Ascendant. You can also view their condensed profile.">
+    <meta property="og:site_name" content="Trine Dating">
+    <meta property="og:url" content="https://adamdolson.github.io/trinedatinghomedesktop/card-browse.html">
+    <meta property="og:image" content="https://adamdolson.github.io/trinedatinghomemobile/item-prop.png">
+    <title>Card Browse - About Trine Dating</title>
+    <link rel="icon" href="favicon-logo.png">
+
+    <style media="screen">
+    /* Body formatting. */
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: linear-gradient(#fffde6, #ffffff, #fffde6);
+      background-repeat: no-repeat;
+    }
+    /* Font. */
+    @font-face {
+      font-family: 'Bahnschrift';
+      src: url('Bahnschrift.eot');
+      src: url('Bahnschrift.eot?#iefix') format('embedded-opentype'),
+      url('Bahnschrift.woff2') format('woff2'),
+      url('Bahnschrift.woff') format('woff'),
+      url('Bahnschrift.ttf') format('truetype'),
+      url('Bahnschrift.svg#Bahnschrift') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Roboto';
+      src: url('Roboto-Regular.eot');
+      src: url('Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+      url('Roboto-Regular.woff2') format('woff2'),
+      url('Roboto-Regular.woff') format('woff'),
+      url('Roboto-Regular.ttf') format('truetype'),
+      url('Roboto-Regular.svg#Roboto-Regular') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    /* Top navigation. */
+    .top-navigation {
+      height: 8vh;
+      position: fixed;
+      width: 100%;
+      background-image: linear-gradient(to right, #ff3300, #ff7700);
+      display: flex;
+      box-shadow: 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%), 0px 2px 4px -1px rgb(0 0 0 / 20%);
+    }
+    .top-navigation-banner-logo {
+      height: 100%;
+      width: 70%;
+    }
+    .top-navigation-banner-logo img {
+      height: 100%;
+    }
+    .top-navigation-links {
+      height: 100%;
+      width: 30%;
+      background-color: transparent;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      text-align: center;
+    }
+    .top-navigation-links img {
+      height: 100%;
+    }
+    .top-spacer {
+      height: 8vh;
+      width: 100%;
+      background-color: transparent;
+    }
+    /* Navigation links. */
+    .navigation {
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(to right, #ff3300, #ff7700);
+      display: none;
+      transition-property: opacity;
+      transition-duration: 1s;
+    }
+    .navigation-link-top {
+      height: 7%;
+      width: 100%;
+      display: flex;
+    }
+    .navigation-link-top-1 {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      background-color: transparent;
+      font-family: 'Bahnschrift';
+      font-size: 6.0vw;
+      font-weight: bold;
+    }
+    .navigation-link-top-1 a {
+      padding-left: 33px;
+      text-decoration: none;
+      color: #ffffff;
+      text-shadow: 0px 0px 2px #ffffff;
+    }
+    .navigation-link-top-2 {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      background-color: transparent;
+    }
+    .navigation-link-top-2 img {
+      height: 60%;
+      padding-right: 24px;
+    }
+    .navigation-link {
+      height: 7%;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      background-color: transparent;
+      font-family: 'Bahnschrift';
+      font-size: 6.0vw;
+      font-weight: bold;
+    }
+    .navigation-link a {
+      padding-left: 33px;
+      text-decoration: none;
+      color: #ffffff;
+      text-shadow: 0px 0px 2px #ffffff;
+    }
+    .navigation-download {
+      height: 10%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+    }
+    .navigation-download img {
+      height: 66%;
+      display: none;
+    }
+    .navigation-social {
+      height: 10%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: transparent;
+    }
+    .navigation-social img {
+      height: 60%;
+      padding-right: 3px;
+      padding-left: 3px;
+    }
+    /* Spacers. */
+    .spacer-6 {
+      height: 6vh;
+      width: 100%;
+    }
+    .spacer-3 {
+      height: 3vh;
+      width: 100%;
+    }
+    .spacer-2 {
+      height: 2vh;
+      width: 100%;
+    }
+    .spacer-2-border {
+      border-top: solid 0.66vh #ff3300;
+      height: 2vh;
+      width: 100%;
+    }
+    /* App feature title */
+    .app-feature-title {
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Bahnschrift';
+      font-size: 8.0vw;
+      font-weight: bold;
+    }
+    .app-feature-title img {
+      height: 88%;
+      padding-right: 3vw;
+    }
+    /* App feature description. */
+    .app-feature-description {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Roboto';
+      font-size: 5.5vw;
+      font-weight: bold;
+      text-align: center;
+    }
+    .app-feature-description p {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    /* App feature showcases. */
+    .app-feature-showcase-men {
+      height: 77vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+    }
+    .app-feature-showcase-men img {
+      height: 100%;
+    }
+    .app-feature-showcase-women {
+      height: 77vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+    }
+    .app-feature-showcase-women img {
+      height: 100%;
+    }
+    /* Slideshow index. */
+    .index {
+      height: 7vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .index-1 {
+      height: 2.8vh;
+      width: 2.8vh;
+      background-image: linear-gradient(to right, #c0c0c0, #fffde6);
+      border-radius: 50%;
+      box-shadow: 0px 0px 2px #000000;
+    }
+    .index-2 {
+      height: 2.8vh;
+      width: 2.8vh;
+      background-color: transparent;
+    }
+    .secondindex {
+      height: 7vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    /* Download the app. */
+    .google-play-store-app-store-1 {
+      height: 12vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: 'Bahnschrift';
+      font-size: 5.5vw;
+      font-weight: bold;
+    }
+    .google-play-store-app-store-1 p {
+      padding-left: 3px;
+      padding-right: 3px;
+    }
+    .google-play-store-app-store-2 {
+      height: 12vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .google-play-store-app-store-2 img {
+      height: 77%;
+    }
+    /* Share, newsletter, network. */
+    .account-mobile-6 {
+      height: 12vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Roboto';
+      font-size: 6.6vw;
+      font-weight: bold;
+      text-align: center;
+    }
+    .account-mobile-6 a {
+      text-decoration: none;
+      color: #000000;
+    }
+    .account-mobile-6 img {
+      height: 77%;
+      padding-left: 15px;
+    }
+    .account-mobile-7 {
+      height: 12vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Roboto';
+      font-size: 6.6vw;
+      font-weight: bold;
+      text-align: center;
+    }
+    .account-mobile-7 a {
+      text-decoration: none;
+      color: #000000;
+    }
+    .account-mobile-7 img {
+      height: 77%;
+      padding-right: 15px;
+    }
+    /* House impact glyph. */
+    .house-impact-glyph {
+      height: 15vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .house-impact-glyph img {
+      height: 150%;
+    }
+    /* Energies at a glance. */
+    .energies-at-a-glance-mobile-1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: 'Roboto';
+      font-size: 5.5vw;
+      font-weight: Bold;
+    }
+    .energies-at-a-glance-mobile-2 {
+      height: 8vh;
+      width: 100%;
+      display: flex;
+      font-family: 'Roboto';
+      font-size: 4.4vw;
+      text-align: center;
+    }
+    .energies-at-a-glance-mobile-2 img {
+      height: 46%;
+      padding-right: 0.6vw;
+    }
+    .energies-at-a-glance-mobile-2-1 {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .energies-at-a-glance-mobile-2-2 {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .energies-at-a-glance-mobile-3 {
+      height: 8vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Roboto';
+      font-size: 4.2vw;
+      text-align: center;
+    }
+    .energies-at-a-glance-mobile-3 img {
+      height: 46%;
+      padding-right: 0.9vw;
+    }
+    /* Bottom Navigation mobile. */
+    .bottom-navigation-mobile-1 {
+      width: 100%;
+      font-family: 'Bahnschrift';
+      font-size: 4.4vw;
+      font-weight: 444;
+    }
+    .bottom-navigation-mobile-1 li {
+      list-style: none;
+    }
+    .bottom-navigation-mobile-1 a {
+      text-decoration: none;
+      color: #000000;
+    }
+    /* Pre-registration and full release countdowns, social links, copyright. */
+    .pre-registration-countdown {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: 'Bahnschrift';
+      font-size: 3.3vw;
+      font-weight: 444;
+    }
+    .full-release-countdown {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: 'Bahnschrift';
+      font-size: 3.3vw;
+      font-weight: 444;
+    }
+    .social-links {
+      height: 6vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .social-links img {
+      height: 77%;
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+    .copyright {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: 'Bahnschrift';
+      font-size: 3.3vw;
+      font-weight: 444;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="top-navigation" id="w">
+      <div class="top-navigation-banner-logo">
+        <a href="home.html"> <img src="trine-banner-logo.png" alt="Trine Banner Logo"> </a>
+      </div>
+      <div class="top-navigation-links">
+        <img src="top-navigation-mobile.png" alt="" onclick="topNavigation()">
+      </div>
+    </div>
+    <div class="top-spacer">
+    </div>
+
+    <div class="navigation" id="q">
+      <div class="navigation-link-top">
+        <div class="navigation-link-top-1">
+          <a href="our-app.html">Our App</a>
+        </div>
+        <div class="navigation-link-top-2">
+          <img src="top-navigation-x.png" alt="" onclick="topNavigationClose()">
+        </div>
+      </div>
+      <div class="navigation-link">
+        <a href="about.html">About</a>
+      </div>
+      <div class="navigation-link">
+        <a href="the-synastry-compendium.html">The Synastry Compendium</a>
+      </div>
+      <div class="navigation-link">
+        <a href="memberships.html">Memberships</a>
+      </div>
+      <div class="navigation-link">
+        <a href="charts.html">Charts</a>
+      </div>
+      <div class="navigation-link">
+        <a href="reports.html">Reports</a>
+      </div>
+      <div class="navigation-link">
+        <a href="media.html">Media</a>
+      </div>
+      <div class="navigation-link">
+        <a href="popular-astrology.html">Popular Astrology</a>
+      </div>
+      <div class="navigation-link">
+        <a href="account.html">Account</a>
+      </div>
+      <div class="navigation-link">
+
+      </div>
+      <div class="navigation-download">
+        <img src="google-play-store-badge.png" alt="" id="navgpsb" onclick="googlePlayStoreNavigation()">
+        <img src="app-store-badge.png" alt="" id="navasb" onclick="appStoreNavigation()">
+      </div>
+      <div class="navigation-social">
+        <img src="custom-instagram-icon-white-glow.png" alt="" onclick="instagramNavigation()">
+        <img src="custom-facebook-icon-white-glow.png" alt="" onclick="facebookNavigation()">
+        <img src="custom-pinterest-icon-white-glow.png" alt="" onclick="pinterestNavigation()">
+        <img src="custom-tumblr-icon-white-glow.png" alt="" onclick="tumblrNavigation()">
+        <img src="custom-twitter-icon-white-glow.png" alt="" onclick="twitterNavigation()">
+      </div>
+    </div>
+
+    <div class="spacer-2">
+    </div>
+    <div class="app-feature-title">
+      <img src="card-browse-symbol.png" alt="">
+      Card Browse
+    </div>
+
+    <div class="app-feature-description">
+      <p>Get a first impression with card browsing. See your potential match's name,
+      age, Sun, Moon, and Ascendant.</p>
+    </div>
+
+    <div class="spacer-3">
+
+    </div>
+    <div class="app-feature-showcase-men">
+      <img src="robert-taurus-man-card-browse-iphone.png" alt="" id="cbm1" style="display: flex;"
+      onclick="cardBrowseMen1()">
+      <img src="ricky-scorpio-man-card-browse-iphone.png" alt="" id="cbm2" style="display: none;"
+      onclick="cardBrowseMen2()">
+      <img src="pablo-libra-man-card-browse-iphone.png" alt="" id="cbm3" style="display: none;"
+      onclick="cardBrowseMen3()">
+      <img src="andrew-sagittarius-man-card-browse-iphone.png" alt="" id="cbm4" style="display: none;"
+      onclick="cardBrowseMen4()">
+      <img src="alex-pisces-man-card-browse-iphone.png" alt="" id="cbm5" style="display: none;"
+      onclick="cardBrowseMen5()">
+      <img src="nick-aquarius-man-card-browse-iphone.png" alt="" id="cbm6" style="display: none;"
+      onclick="cardBrowseMen6()">
+      <img src="george-cancer-man-card-browse-iphone.png" alt="" id="cbm7" style="display: none;"
+      onclick="cardBrowseMen7()">
+      <img src="jared-gemini-man-card-browse-iphone.png" alt="" id="cbm8" style="display: none;"
+      onclick="cardBrowseMen8()">
+      <img src="kyle-leo-man-card-browse-iphone.png" alt="" id="cbm9" style="display: none;"
+      onclick="cardBrowseMen9()">
+      <img src="dave-virgo-man-card-browse-iphone.png" alt="" id="cbm10" style="display:none;"
+      onclick="cardBrowseMen10()">
+      <img src="jack-aries-man-card-browse-iphone.png" alt="" id="cbm11" style="display: none;"
+      onclick="cardBrowseMen11()">
+      <img src="dogu-capricorn-man-card-browse-iphone.png" alt="" id="cbm12" style="display: none;"
+      onclick="cardBrowseMen12()">
+    </div>
+    <div class="index">
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbim1" style="background-image: linear-gradient(to right, #ff3300, #ff7700)"
+      onclick="cardBrowseMenAlternate1()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbim2" onclick="cardBrowseMenAlternate2()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbim3" onclick="cardBrowseMenAlternate3()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbim4" onclick="cardBrowseMenAlternate4()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbim5" onclick="cardBrowseMenAlternate5()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbim6" onclick="cardBrowseMenAlternate6()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+    </div>
+    <div class="secondindex">
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbim7" onclick="cardBrowseMenAlternate7()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbim8" onclick="cardBrowseMenAlternate8()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbim9" onclick="cardBrowseMenAlternate9()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbim10" onclick="cardBrowseMenAlternate10()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbim11" onclick="cardBrowseMenAlternate11()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbim12" onclick="cardBrowseMenAlternate12()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+    </div>
+    <div class="spacer-3">
+
+    </div>
+
+    <div class="app-feature-showcase-women">
+      <img src="andrea-aries-woman-card-browse-iphone.png" alt="" id="cbw1" style="display: flex;"
+      onclick="cardBrowseWomen1()">
+      <img src="victoria-gemini-woman-card-browse-iphone.png" alt="" id="cbw2" style="display: none;"
+      onclick="cardBrowseWomen2()">
+      <img src="sophie-sagittarius-woman-card-browse-iphone.png" alt="" id="cbw3" style="display: none;"
+      onclick="cardBrowseWomen3()">
+      <img src="sandra-leo-woman-card-browse-iphone.png" alt="" id="cbw4" style="display: none;"
+      onclick="cardBrowseWomen4()">
+      <img src="diana-cancer-woman-card-browse-iphone.png" alt="" id="cbw5" style="display: none;"
+      onclick="cardBrowseWomen5()">
+      <img src="ida-taurus-woman-card-browse-iphone.png" alt="" id="cbw6" style="display: none;"
+      onclick="cardBrowseWomen6()">
+      <img src="heather-pisces-woman-card-browse-iphone.png" alt="" id="cbw7" style="display: none;"
+      onclick="cardBrowseWomen7()">
+      <img src="anya-capricorn-woman-card-browse-iphone.png" alt="" id="cbw8" style="display: none;"
+      onclick="cardBrowseWomen8()">
+      <img src="irina-virgo-woman-card-browse-iphone.png" alt="" id="cbw9" style="display: none;"
+      onclick="cardBrowseWomen9()">
+      <img src="anna-scorpio-woman-card-browse-iphone.png" alt="" id="cbw10" style="display: none;"
+      onclick="cardBrowseWomen10()">
+      <img src="isabel-aquarius-woman-card-browse-iphone.png" alt="" id="cbw11" style="display: none;"
+      onclick="cardBrowseWomen11()">
+      <img src="emily-libra-woman-card-browse-iphone.png" alt="" id="cbw12" style="display: none;"
+      onclick="cardBrowseWomen12()">
+    </div>
+    <div class="index">
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbiw1" style="background-image: linear-gradient(to right, #ff3300, #ff7700)"
+      onclick="cardBrowseWomenAlternate1()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbiw2" onclick="cardBrowseWomenAlternate2()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbiw3" onclick="cardBrowseWomenAlternate3()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbiw4" onclick="cardBrowseWomenAlternate4()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbiw5" onclick="cardBrowseWomenAlternate5()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbiw6" onclick="cardBrowseWomenAlternate6()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+    </div>
+    <div class="secondindex">
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbiw7" onclick="cardBrowseWomenAlternate7()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbiw8" onclick="cardBrowseWomenAlternate8()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbiw9" onclick="cardBrowseWomenAlternate9()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbiw10" onclick="cardBrowseWomenAlternate10()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbiw11" onclick="cardBrowseWomenAlternate11()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+      <div class="index-1" id="cbiw12" onclick="cardBrowseWomenAlternate12()">
+
+      </div>
+      <div class="index-2">
+
+      </div>
+    </div>
+    <div class="spacer-3">
+
+    </div>
+
+    <div class="google-play-store-app-store-1">
+      <p>START CREATING MORE CONSCIOUS CONNECTIONS, DOWNLOAD THE TRINE DATING APP
+      FOR ANDROID OR iOS</p>
+    </div>
+    <div class="google-play-store-app-store-2">
+      <img src="google-play-store-badge.png" alt="" id="gpsb" style="display:none;">
+      <img src="app-store-badge.png" alt="" id="asb" style="display:none;">
+    </div>
+    <div class="spacer-6">
+
+    </div>
+
+    <div class="account-mobile-6">
+      <a href="share-with-friends.html">Share with<br>Friends</a>
+      <img src="share-symbol.png" alt="">
+    </div>
+    <div class="account-mobile-7">
+      <img src="newsletter-symbol.png" alt="">
+      <a href="trine-newsletter.html">Subscribe to our<br>Newsletter</a>
+    </div>
+    <div class="account-mobile-6">
+      <a href="the-trine-network.html">The Trine<br>Network</a>
+      <img src="network-symbol.png" alt="">
+    </div>
+    <div class="spacer-6">
+
+    </div>
+
+    <div class="spacer-2-border">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="house-impact-glyph">
+      <img src="house-impact-glyph.png" alt="" onclick="houseImpactNavigation()">
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="spacer-2">
+
+    </div>
+
+    <div class="spacer-2-border">
+
+    </div>
+    <div class="energies-at-a-glance-mobile-1">
+      <p>Current Energies at a Glance</p>
+    </div>
+    <div class="energies-at-a-glance-mobile-2">
+      <div class="energies-at-a-glance-mobile-2-1">
+        <img src="sun-symbol-shadow.png" alt="" style="padding-right: 1.2vw;">
+        <p>0°0' Sign</p>
+      </div>
+      <div class="energies-at-a-glance-mobile-2-2">
+        <img src="moon-symbol-shadow.png" alt="" style="padding-right: 1.2vw;">
+        <p>0°0' Sign</p>
+      </div>
+    </div>
+    <div class="energies-at-a-glance-mobile-2">
+      <div class="energies-at-a-glance-mobile-2-1">
+        <img src="mercury-symbol-shadow.png" alt="">
+        <p>0°0' Sign</p>
+      </div>
+      <div class="energies-at-a-glance-mobile-2-2">
+        <img src="venus-symbol-shadow.png" alt="">
+        <p>0°0' Sign</p>
+      </div>
+    </div>
+    <div class="energies-at-a-glance-mobile-2">
+      <div class="energies-at-a-glance-mobile-2-1">
+        <img src="north-node-symbol-shadow.png" alt="">
+        <p>0°0' Sign</p>
+      </div>
+      <div class="energies-at-a-glance-mobile-2-2">
+        <img src="south-node-symbol-shadow.png" alt="">
+        <p>0°0' Sign</p>
+      </div>
+    </div>
+    <div class="energies-at-a-glance-mobile-2">
+      <div class="energies-at-a-glance-mobile-2-1">
+        <img src="lilith-symbol-shadow.png" alt="">
+        <p>0°0' Sign</p>
+      </div>
+      <div class="energies-at-a-glance-mobile-2-2">
+        <img src="mars-symbol-shadow.png" alt="">
+        <p>0°0' Sign</p>
+      </div>
+    </div>
+    <div class="energies-at-a-glance-mobile-2">
+      <div class="energies-at-a-glance-mobile-2-1">
+        <img src="jupiter-symbol-shadow.png" alt="">
+        <p>0°0' Sign</p>
+      </div>
+      <div class="energies-at-a-glance-mobile-2-2">
+        <img src="saturn-symbol-shadow.png" alt="">
+        <p>0°0' Sign</p>
+      </div>
+    </div>
+    <div class="energies-at-a-glance-mobile-2">
+      <div class="energies-at-a-glance-mobile-2-1">
+        <img src="chiron-symbol-shadow.png" alt="">
+        <p>0°0' Sign</p>
+      </div>
+      <div class="energies-at-a-glance-mobile-2-2">
+        <img src="uranus-symbol-shadow.png" alt="">
+        <p>0°0' Sign</p>
+      </div>
+    </div>
+    <div class="energies-at-a-glance-mobile-2">
+      <div class="energies-at-a-glance-mobile-2-1">
+        <img src="neptune-symbol-shadow.png" alt="">
+        <p>0°0' Sign</p>
+      </div>
+      <div class="energies-at-a-glance-mobile-2-2">
+        <img src="pluto-symbol-shadow.png" alt="">
+        <p>0°0' Sign</p>
+      </div>
+    </div>
+    <div class="energies-at-a-glance-mobile-3">
+      <img src="planet-x-symbol-shadow.png" alt="">
+      <p>Where are you Planet X?</p>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+
+    <div class="spacer-2-border">
+
+    </div>
+    <div class="bottom-navigation-mobile-1">
+      <ul>
+        <li> <a href="safety-and-security.html" style="font-size: 5.0vw;">Safety and Security</a> </li>
+        <li> <a href="community-guidelines.html">Community Guidelines</a> </li>
+        <li> <a href="safe-use.html">Safe Use</a> </li>
+        <li> <a href="secure-use.html">Secure Use</a> </li>
+      </ul>
+      <ul>
+        <li> <a href="legal.html" style="font-size: 5.0vw;">Legal</a> </li>
+        <li> <a href="privacy-policy.html">Privacy Policy</a> </li>
+        <li> <a href="terms-of-service.html">Terms of Service</a> </li>
+        <li> <a href="cookies-policy.html">Cookies Policy</a> </li>
+        <li> <a href="intellectual-property.html">Intellectual Property</a> </li>
+      </ul>
+      <ul>
+        <li> <a href="corporate.html" style="font-size: 5.0vw;">Corporate</a> </li>
+        <li> <a href="our-team.html">Our Team</a> </li>
+        <li> <a href="career-opportunities.html">Career Opportunities</a> </li>
+        <li> <a href="investment-inquiries.html">Investment Inquiries</a> </li>
+      </ul>
+      <ul>
+        <li> <a href="social-links.html" style="font-size: 5.0vw;">Social Links</a> </li>
+        <li> <a href="https://www.instagram.com/trine.app/">Instagram</a> </li>
+        <li> <a href="https://twitter.com/trine_app">Twitter</a> </li>
+        <li> <a href="https://www.facebook.com/Trine-102694105333411">Facebook</a> </li>
+        <li> <a href="https://www.tumblr.com/blog/trineapp">Tumblr</a> </li>
+        <li> <a href="https://www.pinterest.ca/trine_app/">Pinterest</a> </li>
+      </ul>
+      <ul>
+        <li> <a href="support.html" style="font-size: 5.0vw;">Support</a> </li>
+        <li> <a href="faq.html">FAQ</a> </li>
+        <li> <a href="contact-support.html">Contact Support</a> </li>
+        <li> <a href="general-inquiries.html">General Inquiries</a> </li>
+        <li> <a href="feedback-and-suggestions.html">Feedback and Suggestions</a> </li>
+      </ul>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+
+    <div class="spacer-2-border">
+
+    </div>
+    <div class="pre-registration-countdown">
+      <p>Pre-registration links available in <span id="preRegistrationCountDown"></span></p>
+    </div>
+    <div class="full-release-countdown">
+      <p>Full release in <span id="fullReleaseCountDown"></span></p>
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="social-links">
+      <img src="custom-instagram-icon.png" alt="" onclick="instagramNavigation()">
+      <img src="custom-twitter-icon.png" alt="" onclick="twitterNavigation()">
+      <img src="custom-facebook-icon.png" alt="" onclick="facebookNavigation()">
+      <img src="custom-tumblr-icon.png" alt="" onclick="tumblrNavigation()">
+      <img src="custom-pinterest-icon.png" alt="" onclick="pinterestNavigation()">
+    </div>
+    <div class="spacer-2">
+
+    </div>
+    <div class="copyright">
+      <p>© 2022 Venusian Media Group Ltd., LLC, All Rights Reserved</p>
+    </div>
+  </body>
+  <script type="text/javascript">
+    function cardBrowseMen1() {
+      document.getElementById("cbm1").style.display = "none";
+      document.getElementById("cbm2").style.display = "flex";
+      document.getElementById("cbim1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim2").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseMen2() {
+      document.getElementById("cbm2").style.display = "none";
+      document.getElementById("cbm3").style.display = "flex";
+      document.getElementById("cbim2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim3").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseMen3() {
+      document.getElementById("cbm3").style.display = "none";
+      document.getElementById("cbm4").style.display = "flex";
+      document.getElementById("cbim3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim4").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseMen4() {
+      document.getElementById("cbm4").style.display = "none";
+      document.getElementById("cbm5").style.display = "flex";
+      document.getElementById("cbim4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim5").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseMen5() {
+      document.getElementById("cbm5").style.display = "none";
+      document.getElementById("cbm6").style.display = "flex";
+      document.getElementById("cbim5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim6").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseMen6() {
+      document.getElementById("cbm6").style.display = "none";
+      document.getElementById("cbm7").style.display = "flex";
+      document.getElementById("cbim6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim7").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseMen7() {
+      document.getElementById("cbm7").style.display = "none";
+      document.getElementById("cbm8").style.display = "flex";
+      document.getElementById("cbim7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim8").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseMen8() {
+      document.getElementById("cbm8").style.display = "none";
+      document.getElementById("cbm9").style.display = "flex";
+      document.getElementById("cbim8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim9").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseMen9() {
+      document.getElementById("cbm9").style.display = "none";
+      document.getElementById("cbm10").style.display = "flex";
+      document.getElementById("cbim9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim10").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseMen10() {
+      document.getElementById("cbm10").style.display = "none";
+      document.getElementById("cbm11").style.display = "flex";
+      document.getElementById("cbim10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim11").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseMen11() {
+      document.getElementById("cbm11").style.display = "none";
+      document.getElementById("cbm12").style.display = "flex";
+      document.getElementById("cbim11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim12").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseMen12() {
+      document.getElementById("cbm12").style.display = "none";
+      document.getElementById("cbm1").style.display = "flex";
+      document.getElementById("cbim12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim1").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseMenAlternate1() {
+      document.getElementById("cbim2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbm2").style.display = "none";
+      document.getElementById("cbm3").style.display = "none";
+      document.getElementById("cbm4").style.display = "none";
+      document.getElementById("cbm5").style.display = "none";
+      document.getElementById("cbm6").style.display = "none";
+      document.getElementById("cbm7").style.display = "none";
+      document.getElementById("cbm8").style.display = "none";
+      document.getElementById("cbm9").style.display = "none";
+      document.getElementById("cbm10").style.display = "none";
+      document.getElementById("cbm11").style.display = "none";
+      document.getElementById("cbm12").style.display = "none";
+      document.getElementById("cbim1").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbm1").style.display = "flex";
+    }
+    function cardBrowseMenAlternate2() {
+      document.getElementById("cbim1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbm1").style.display = "none";
+      document.getElementById("cbm3").style.display = "none";
+      document.getElementById("cbm4").style.display = "none";
+      document.getElementById("cbm5").style.display = "none";
+      document.getElementById("cbm6").style.display = "none";
+      document.getElementById("cbm7").style.display = "none";
+      document.getElementById("cbm8").style.display = "none";
+      document.getElementById("cbm9").style.display = "none";
+      document.getElementById("cbm10").style.display = "none";
+      document.getElementById("cbm11").style.display = "none";
+      document.getElementById("cbm12").style.display = "none";
+      document.getElementById("cbim2").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbm2").style.display = "flex";
+    }
+    function cardBrowseMenAlternate3() {
+      document.getElementById("cbim1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbm1").style.display = "none";
+      document.getElementById("cbm2").style.display = "none";
+      document.getElementById("cbm4").style.display = "none";
+      document.getElementById("cbm5").style.display = "none";
+      document.getElementById("cbm6").style.display = "none";
+      document.getElementById("cbm7").style.display = "none";
+      document.getElementById("cbm8").style.display = "none";
+      document.getElementById("cbm9").style.display = "none";
+      document.getElementById("cbm10").style.display = "none";
+      document.getElementById("cbm11").style.display = "none";
+      document.getElementById("cbm12").style.display = "none";
+      document.getElementById("cbim3").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbm3").style.display = "flex";
+    }
+    function cardBrowseMenAlternate4() {
+      document.getElementById("cbim1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbm1").style.display = "none";
+      document.getElementById("cbm2").style.display = "none";
+      document.getElementById("cbm3").style.display = "none";
+      document.getElementById("cbm5").style.display = "none";
+      document.getElementById("cbm6").style.display = "none";
+      document.getElementById("cbm7").style.display = "none";
+      document.getElementById("cbm8").style.display = "none";
+      document.getElementById("cbm9").style.display = "none";
+      document.getElementById("cbm10").style.display = "none";
+      document.getElementById("cbm11").style.display = "none";
+      document.getElementById("cbm12").style.display = "none";
+      document.getElementById("cbim4").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbm4").style.display = "flex";
+    }
+    function cardBrowseMenAlternate5() {
+      document.getElementById("cbim1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbm1").style.display = "none";
+      document.getElementById("cbm2").style.display = "none";
+      document.getElementById("cbm3").style.display = "none";
+      document.getElementById("cbm4").style.display = "none";
+      document.getElementById("cbm6").style.display = "none";
+      document.getElementById("cbm7").style.display = "none";
+      document.getElementById("cbm8").style.display = "none";
+      document.getElementById("cbm9").style.display = "none";
+      document.getElementById("cbm10").style.display = "none";
+      document.getElementById("cbm11").style.display = "none";
+      document.getElementById("cbm12").style.display = "none";
+      document.getElementById("cbim5").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbm5").style.display = "flex";
+    }
+    function cardBrowseMenAlternate6() {
+      document.getElementById("cbim1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbm1").style.display = "none";
+      document.getElementById("cbm2").style.display = "none";
+      document.getElementById("cbm3").style.display = "none";
+      document.getElementById("cbm4").style.display = "none";
+      document.getElementById("cbm5").style.display = "none";
+      document.getElementById("cbm7").style.display = "none";
+      document.getElementById("cbm8").style.display = "none";
+      document.getElementById("cbm9").style.display = "none";
+      document.getElementById("cbm10").style.display = "none";
+      document.getElementById("cbm11").style.display = "none";
+      document.getElementById("cbm12").style.display = "none";
+      document.getElementById("cbim6").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbm6").style.display = "flex";
+    }
+    function cardBrowseMenAlternate7() {
+      document.getElementById("cbim1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbm1").style.display = "none";
+      document.getElementById("cbm2").style.display = "none";
+      document.getElementById("cbm3").style.display = "none";
+      document.getElementById("cbm4").style.display = "none";
+      document.getElementById("cbm5").style.display = "none";
+      document.getElementById("cbm6").style.display = "none";
+      document.getElementById("cbm8").style.display = "none";
+      document.getElementById("cbm9").style.display = "none";
+      document.getElementById("cbm10").style.display = "none";
+      document.getElementById("cbm11").style.display = "none";
+      document.getElementById("cbm12").style.display = "none";
+      document.getElementById("cbim7").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbm7").style.display = "flex";
+    }
+    function cardBrowseMenAlternate8() {
+      document.getElementById("cbim1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbm1").style.display = "none";
+      document.getElementById("cbm2").style.display = "none";
+      document.getElementById("cbm3").style.display = "none";
+      document.getElementById("cbm4").style.display = "none";
+      document.getElementById("cbm5").style.display = "none";
+      document.getElementById("cbm6").style.display = "none";
+      document.getElementById("cbm7").style.display = "none";
+      document.getElementById("cbm9").style.display = "none";
+      document.getElementById("cbm10").style.display = "none";
+      document.getElementById("cbm11").style.display = "none";
+      document.getElementById("cbm12").style.display = "none";
+      document.getElementById("cbim8").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbm8").style.display = "flex";
+    }
+    function cardBrowseMenAlternate9() {
+      document.getElementById("cbim1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbm1").style.display = "none";
+      document.getElementById("cbm2").style.display = "none";
+      document.getElementById("cbm3").style.display = "none";
+      document.getElementById("cbm4").style.display = "none";
+      document.getElementById("cbm5").style.display = "none";
+      document.getElementById("cbm6").style.display = "none";
+      document.getElementById("cbm7").style.display = "none";
+      document.getElementById("cbm8").style.display = "none";
+      document.getElementById("cbm10").style.display = "none";
+      document.getElementById("cbm11").style.display = "none";
+      document.getElementById("cbm12").style.display = "none";
+      document.getElementById("cbim9").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbm9").style.display = "flex";
+    }
+    function cardBrowseMenAlternate10() {
+      document.getElementById("cbim1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbm1").style.display = "none";
+      document.getElementById("cbm2").style.display = "none";
+      document.getElementById("cbm3").style.display = "none";
+      document.getElementById("cbm4").style.display = "none";
+      document.getElementById("cbm5").style.display = "none";
+      document.getElementById("cbm6").style.display = "none";
+      document.getElementById("cbm7").style.display = "none";
+      document.getElementById("cbm8").style.display = "none";
+      document.getElementById("cbm9").style.display = "none";
+      document.getElementById("cbm11").style.display = "none";
+      document.getElementById("cbm12").style.display = "none";
+      document.getElementById("cbim10").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbm10").style.display = "flex";
+    }
+    function cardBrowseMenAlternate11() {
+      document.getElementById("cbim1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbm1").style.display = "none";
+      document.getElementById("cbm2").style.display = "none";
+      document.getElementById("cbm3").style.display = "none";
+      document.getElementById("cbm4").style.display = "none";
+      document.getElementById("cbm5").style.display = "none";
+      document.getElementById("cbm6").style.display = "none";
+      document.getElementById("cbm7").style.display = "none";
+      document.getElementById("cbm8").style.display = "none";
+      document.getElementById("cbm9").style.display = "none";
+      document.getElementById("cbm10").style.display = "none";
+      document.getElementById("cbm12").style.display = "none";
+      document.getElementById("cbim11").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbm11").style.display = "flex";
+    }
+    function cardBrowseMenAlternate12() {
+      document.getElementById("cbim1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbim11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbm1").style.display = "none";
+      document.getElementById("cbm2").style.display = "none";
+      document.getElementById("cbm3").style.display = "none";
+      document.getElementById("cbm4").style.display = "none";
+      document.getElementById("cbm5").style.display = "none";
+      document.getElementById("cbm6").style.display = "none";
+      document.getElementById("cbm7").style.display = "none";
+      document.getElementById("cbm8").style.display = "none";
+      document.getElementById("cbm9").style.display = "none";
+      document.getElementById("cbm10").style.display = "none";
+      document.getElementById("cbm11").style.display = "none";
+      document.getElementById("cbim12").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbm12").style.display = "flex";
+    }
+    function cardBrowseWomenAlternate1() {
+      document.getElementById("cbiw2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbw2").style.display = "none";
+      document.getElementById("cbw3").style.display = "none";
+      document.getElementById("cbw4").style.display = "none";
+      document.getElementById("cbw5").style.display = "none";
+      document.getElementById("cbw6").style.display = "none";
+      document.getElementById("cbw7").style.display = "none";
+      document.getElementById("cbw8").style.display = "none";
+      document.getElementById("cbw9").style.display = "none";
+      document.getElementById("cbw10").style.display = "none";
+      document.getElementById("cbw11").style.display = "none";
+      document.getElementById("cbw12").style.display = "none";
+      document.getElementById("cbiw1").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbw1").style.display = "flex";
+    }
+    function cardBrowseWomenAlternate2() {
+      document.getElementById("cbiw1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbw1").style.display = "none";
+      document.getElementById("cbw3").style.display = "none";
+      document.getElementById("cbw4").style.display = "none";
+      document.getElementById("cbw5").style.display = "none";
+      document.getElementById("cbw6").style.display = "none";
+      document.getElementById("cbw7").style.display = "none";
+      document.getElementById("cbw8").style.display = "none";
+      document.getElementById("cbw9").style.display = "none";
+      document.getElementById("cbw10").style.display = "none";
+      document.getElementById("cbw11").style.display = "none";
+      document.getElementById("cbw12").style.display = "none";
+      document.getElementById("cbiw2").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbw2").style.display = "flex";
+    }
+    function cardBrowseWomenAlternate3() {
+      document.getElementById("cbiw1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbw1").style.display = "none";
+      document.getElementById("cbw2").style.display = "none";
+      document.getElementById("cbw4").style.display = "none";
+      document.getElementById("cbw5").style.display = "none";
+      document.getElementById("cbw6").style.display = "none";
+      document.getElementById("cbw7").style.display = "none";
+      document.getElementById("cbw8").style.display = "none";
+      document.getElementById("cbw9").style.display = "none";
+      document.getElementById("cbw10").style.display = "none";
+      document.getElementById("cbw11").style.display = "none";
+      document.getElementById("cbw12").style.display = "none";
+      document.getElementById("cbiw3").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbw3").style.display = "flex";
+    }
+    function cardBrowseWomenAlternate4() {
+      document.getElementById("cbiw1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbw1").style.display = "none";
+      document.getElementById("cbw2").style.display = "none";
+      document.getElementById("cbw3").style.display = "none";
+      document.getElementById("cbw5").style.display = "none";
+      document.getElementById("cbw6").style.display = "none";
+      document.getElementById("cbw7").style.display = "none";
+      document.getElementById("cbw8").style.display = "none";
+      document.getElementById("cbw9").style.display = "none";
+      document.getElementById("cbw10").style.display = "none";
+      document.getElementById("cbw11").style.display = "none";
+      document.getElementById("cbw12").style.display = "none";
+      document.getElementById("cbiw4").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbw4").style.display = "flex";
+    }
+    function cardBrowseWomenAlternate5() {
+      document.getElementById("cbiw1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbw1").style.display = "none";
+      document.getElementById("cbw2").style.display = "none";
+      document.getElementById("cbw3").style.display = "none";
+      document.getElementById("cbw4").style.display = "none";
+      document.getElementById("cbw6").style.display = "none";
+      document.getElementById("cbw7").style.display = "none";
+      document.getElementById("cbw8").style.display = "none";
+      document.getElementById("cbw9").style.display = "none";
+      document.getElementById("cbw10").style.display = "none";
+      document.getElementById("cbw11").style.display = "none";
+      document.getElementById("cbw12").style.display = "none";
+      document.getElementById("cbiw5").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbw5").style.display = "flex";
+    }
+    function cardBrowseWomenAlternate6() {
+      document.getElementById("cbiw1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbw1").style.display = "none";
+      document.getElementById("cbw2").style.display = "none";
+      document.getElementById("cbw3").style.display = "none";
+      document.getElementById("cbw4").style.display = "none";
+      document.getElementById("cbw5").style.display = "none";
+      document.getElementById("cbw7").style.display = "none";
+      document.getElementById("cbw8").style.display = "none";
+      document.getElementById("cbw9").style.display = "none";
+      document.getElementById("cbw10").style.display = "none";
+      document.getElementById("cbw11").style.display = "none";
+      document.getElementById("cbw12").style.display = "none";
+      document.getElementById("cbiw6").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbw6").style.display = "flex";
+    }
+    function cardBrowseWomenAlternate7() {
+      document.getElementById("cbiw1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbw1").style.display = "none";
+      document.getElementById("cbw2").style.display = "none";
+      document.getElementById("cbw3").style.display = "none";
+      document.getElementById("cbw4").style.display = "none";
+      document.getElementById("cbw5").style.display = "none";
+      document.getElementById("cbw6").style.display = "none";
+      document.getElementById("cbw8").style.display = "none";
+      document.getElementById("cbw9").style.display = "none";
+      document.getElementById("cbw10").style.display = "none";
+      document.getElementById("cbw11").style.display = "none";
+      document.getElementById("cbw12").style.display = "none";
+      document.getElementById("cbiw7").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbw7").style.display = "flex";
+    }
+    function cardBrowseWomenAlternate8() {
+      document.getElementById("cbiw1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbw1").style.display = "none";
+      document.getElementById("cbw2").style.display = "none";
+      document.getElementById("cbw3").style.display = "none";
+      document.getElementById("cbw4").style.display = "none";
+      document.getElementById("cbw5").style.display = "none";
+      document.getElementById("cbw6").style.display = "none";
+      document.getElementById("cbw7").style.display = "none";
+      document.getElementById("cbw9").style.display = "none";
+      document.getElementById("cbw10").style.display = "none";
+      document.getElementById("cbw11").style.display = "none";
+      document.getElementById("cbw12").style.display = "none";
+      document.getElementById("cbiw8").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbw8").style.display = "flex";
+    }
+    function cardBrowseWomenAlternate9() {
+      document.getElementById("cbiw1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbw1").style.display = "none";
+      document.getElementById("cbw2").style.display = "none";
+      document.getElementById("cbw3").style.display = "none";
+      document.getElementById("cbw4").style.display = "none";
+      document.getElementById("cbw5").style.display = "none";
+      document.getElementById("cbw6").style.display = "none";
+      document.getElementById("cbw7").style.display = "none";
+      document.getElementById("cbw8").style.display = "none";
+      document.getElementById("cbw10").style.display = "none";
+      document.getElementById("cbw11").style.display = "none";
+      document.getElementById("cbw12").style.display = "none";
+      document.getElementById("cbiw9").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbw9").style.display = "flex";
+    }
+    function cardBrowseWomenAlternate10() {
+      document.getElementById("cbiw1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbw1").style.display = "none";
+      document.getElementById("cbw2").style.display = "none";
+      document.getElementById("cbw3").style.display = "none";
+      document.getElementById("cbw4").style.display = "none";
+      document.getElementById("cbw5").style.display = "none";
+      document.getElementById("cbw6").style.display = "none";
+      document.getElementById("cbw7").style.display = "none";
+      document.getElementById("cbw8").style.display = "none";
+      document.getElementById("cbw9").style.display = "none";
+      document.getElementById("cbw11").style.display = "none";
+      document.getElementById("cbw12").style.display = "none";
+      document.getElementById("cbiw10").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbw10").style.display = "flex";
+    }
+    function cardBrowseWomenAlternate11() {
+      document.getElementById("cbiw1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbw1").style.display = "none";
+      document.getElementById("cbw2").style.display = "none";
+      document.getElementById("cbw3").style.display = "none";
+      document.getElementById("cbw4").style.display = "none";
+      document.getElementById("cbw5").style.display = "none";
+      document.getElementById("cbw6").style.display = "none";
+      document.getElementById("cbw7").style.display = "none";
+      document.getElementById("cbw8").style.display = "none";
+      document.getElementById("cbw9").style.display = "none";
+      document.getElementById("cbw10").style.display = "none";
+      document.getElementById("cbw12").style.display = "none";
+      document.getElementById("cbiw11").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbw11").style.display = "flex";
+    }
+    function cardBrowseWomenAlternate12() {
+      document.getElementById("cbiw1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbw1").style.display = "none";
+      document.getElementById("cbw2").style.display = "none";
+      document.getElementById("cbw3").style.display = "none";
+      document.getElementById("cbw4").style.display = "none";
+      document.getElementById("cbw5").style.display = "none";
+      document.getElementById("cbw6").style.display = "none";
+      document.getElementById("cbw7").style.display = "none";
+      document.getElementById("cbw8").style.display = "none";
+      document.getElementById("cbw9").style.display = "none";
+      document.getElementById("cbw10").style.display = "none";
+      document.getElementById("cbw11").style.display = "none";
+      document.getElementById("cbiw12").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+      document.getElementById("cbw12").style.display = "flex";
+    }
+    function cardBrowseWomen1() {
+      document.getElementById("cbw1").style.display = "none";
+      document.getElementById("cbw2").style.display = "flex";
+      document.getElementById("cbiw1").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw2").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseWomen2() {
+      document.getElementById("cbw2").style.display = "none";
+      document.getElementById("cbw3").style.display = "flex";
+      document.getElementById("cbiw2").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw3").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseWomen3() {
+      document.getElementById("cbw3").style.display = "none";
+      document.getElementById("cbw4").style.display = "flex";
+      document.getElementById("cbiw3").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw4").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseWomen4() {
+      document.getElementById("cbw4").style.display = "none";
+      document.getElementById("cbw5").style.display = "flex";
+      document.getElementById("cbiw4").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw5").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseWomen5() {
+      document.getElementById("cbw5").style.display = "none";
+      document.getElementById("cbw6").style.display = "flex";
+      document.getElementById("cbiw5").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw6").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseWomen6() {
+      document.getElementById("cbw6").style.display = "none";
+      document.getElementById("cbw7").style.display = "flex";
+      document.getElementById("cbiw6").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw7").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseWomen7() {
+      document.getElementById("cbw7").style.display = "none";
+      document.getElementById("cbw8").style.display = "flex";
+      document.getElementById("cbiw7").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw8").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseWomen8() {
+      document.getElementById("cbw8").style.display = "none";
+      document.getElementById("cbw9").style.display = "flex";
+      document.getElementById("cbiw8").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw9").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseWomen9() {
+      document.getElementById("cbw9").style.display = "none";
+      document.getElementById("cbw10").style.display = "flex";
+      document.getElementById("cbiw9").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw10").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseWomen10() {
+      document.getElementById("cbw10").style.display = "none";
+      document.getElementById("cbw11").style.display = "flex";
+      document.getElementById("cbiw10").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw11").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseWomen11() {
+      document.getElementById("cbw11").style.display = "none";
+      document.getElementById("cbw12").style.display = "flex";
+      document.getElementById("cbiw11").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw12").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function cardBrowseWomen12() {
+      document.getElementById("cbw12").style.display = "none";
+      document.getElementById("cbw1").style.display = "flex";
+      document.getElementById("cbiw12").style.backgroundImage = "linear-gradient(to right, #c0c0c0, #fffde6)";
+      document.getElementById("cbiw1").style.backgroundImage = "linear-gradient(to right, #ff3300, #ff7700)";
+    }
+    function topNavigation() {
+      document.getElementById("w").style.zIndex = "0";
+      document.getElementById("q").style.display = "inline-block";
+      document.getElementById("q").style.zIndex = "1";
+      document.getElementById("q").style.opacity = "100%";
+    }
+    function topNavigationClose() {
+      document.getElementById("q").style.opacity = "0%";
+      document.getElementById("q").style.zIndex = "0";
+      document.getElementById("q").style.display = "none";
+      document.getElementById("w").style.zIndex = "1";
+    }
+    var preRegistrationCountDown = new Date("Dec 23, 2022 15:00:00").getTime();
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = preRegistrationCountDown - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("preRegistrationCountDown").innerHTML = " " + days + ":" + hours + ":"
+      + minutes + ":" + seconds + "";
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("preRegistrationCountDown").innerHTML = "GO TIME";
+      }
+    }, 1000);
+    var fullReleaseCountDown = new Date("Mar 23, 2023 15:00:00").getTime();
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = fullReleaseCountDown - now;
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("fullReleaseCountDown").innerHTML = " " + days + ":" + hours + ":"
+      + minutes + ":" + seconds + "";
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("fullReleaseCountDown").innerHTML = "GO TIME";
+      }
+    }, 1000);
+    _iOSDevice = !!navigator.platform.match(/iPhone|iPod|iPad/);
+    if (_iOSDevice === true) {
+      document.getElementById("asb").style.display = "flex";
+      document.getElementById("navasb").style.display = "flex";
+    }
+    if (_iOSDevice === false) {
+      document.getElementById("gpsb").style.display = "flex";
+      document.getElementById("navgpsb").style.display = "flex";
+    }
+    function googlePlayStoreNavigation() {
+      window.location.href = "https://play.google.com/store/apps/details?id=com.google.android.youtube";
+    }
+    function appStoreNavigation() {
+      window.location.href = "https://apps.apple.com/us/app/youtube-watch-listen-stream/id544007664";
+    }
+    function instagramNavigation() {
+      window.location.href = "https://www.instagram.com/trine.app/";
+    }
+    function facebookNavigation() {
+      window.location.href = "https://www.facebook.com/Trine-102694105333411";
+    }
+    function twitterNavigation() {
+      window.location.href = "https://twitter.com/trine_app";
+    }
+    function pinterestNavigation() {
+      window.location.href = "https://www.pinterest.ca/trine_app/";
+    }
+    function tumblrNavigation() {
+      window.location.href = "https://www.tumblr.com/blog/trineapp"
+    }
+    function houseImpactNavigation() {
+      window.location.href = "house-impact.html"
+    }
+  </script>
+</html>
