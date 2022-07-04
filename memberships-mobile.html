@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Upgrade to a premium membership to access a wide range of exclusive benefits. We offer three subscription tiers: Solar, Lunar, and Venusian, as well as trial periods so you can give it a go for free.">
+    <meta itemprop="image" content="https://adamdolson.github.io/trinedatinghomemobile/item-prop.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Premium Memberships - Trine Dating - Meet People and Make Connections with Astrology">
+    <meta property="og:description" content="Upgrade to a premium membership to access a wide range of exclusive benefits. We offer three subscription tiers: Solar, Lunar, and Venusian, as well as trial periods so you can give it a go for free.">
+    <meta property="og:site_name" content="Trine Dating">
+    <meta property="og:url" content="https://adamdolson.github.io/trinedatinghomedesktop/card-browse.html">
+    <meta property="og:image" content="https://adamdolson.github.io/trinedatinghomemobile/item-prop.png">
+    <title>Premium Memberships - Trine Dating - Meet People and Make Connections with Astrology</title>
+    <link rel="icon" href="favicon-logo.png">
+
+    <style media="screen">
+      /* Body formatting. */
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(#fffde6, #ffffff, #fffde6);
+        background-repeat: no-repeat;
+      }
+      /* Font. */
+      @font-face {
+        font-family: 'Bahnschrift';
+        src: url('Bahnschrift.eot');
+        src: url('Bahnschrift.eot?#iefix') format('embedded-opentype'),
+        url('Bahnschrift.woff2') format('woff2'),
+        url('Bahnschrift.woff') format('woff'),
+        url('Bahnschrift.ttf') format('truetype'),
+        url('Bahnschrift.svg#Bahnschrift') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'Roboto';
+        src: url('Roboto-Regular.eot');
+        src: url('Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-Regular.woff2') format('woff2'),
+        url('Roboto-Regular.woff') format('woff'),
+        url('Roboto-Regular.ttf') format('truetype'),
+        url('Roboto-Regular.svg#Roboto-Regular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+      /* Top navigation. */
+      .top-navigation {
+        height: 8vh;
+        position: fixed;
+        width: 100%;
+        background-image: linear-gradient(to right, #ff3300, #ff7700);
+        display: flex;
+        box-shadow: 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%), 0px 2px 4px -1px rgb(0 0 0 / 20%);
+      }
+      .top-navigation-banner-logo {
+        height: 100%;
+        width: 70%;
+      }
+      .top-navigation-banner-logo img {
+        height: 100%;
+      }
+      .top-navigation-links {
+        height: 100%;
+        width: 30%;
+        background-color: transparent;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+      }
+      .top-navigation-links img {
+        height: 100%;
+      }
+      .top-spacer {
+        height: 8vh;
+        width: 100%;
+        background-color: transparent;
+      }
+      /* Navigation links. */
+      .navigation {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right, #ff3300, #ff7700);
+        display: none;
+        transition-property: opacity;
+        transition-duration: 1s;
+      }
+      .navigation-link-top {
+        height: 7%;
+        width: 100%;
+        display: flex;
+      }
+      .navigation-link-top-1 {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        background-color: transparent;
+        font-family: 'Bahnschrift';
+        font-size: 6.0vw;
+        font-weight: bold;
+      }
+      .navigation-link-top-1 a {
+        padding-left: 33px;
+        text-decoration: none;
+        color: #ffffff;
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+      .navigation-link-top-2 {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        background-color: transparent;
+      }
+      .navigation-link-top-2 img {
+        height: 60%;
+        padding-right: 24px;
+      }
+      .navigation-link {
+        height: 7%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        background-color: transparent;
+        font-family: 'Bahnschrift';
+        font-size: 6.0vw;
+        font-weight: bold;
+      }
+      .navigation-link a {
+        padding-left: 33px;
+        text-decoration: none;
+        color: #ffffff;
+        text-shadow: 0px 0px 2px #ffffff;
+      }
+      .navigation-download {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+      }
+      .navigation-download img {
+        height: 66%;
+        display: none;
+      }
+      .navigation-social {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: transparent;
+      }
+      .navigation-social img {
+        height: 60%;
+        padding-right: 3px;
+        padding-left: 3px;
+      }
+      /* Spacers. */
+      .spacer-6 {
+        height: 6vh;
+        width: 100%;
+      }
+      .spacer-3 {
+        height: 3vh;
+        width: 100%;
+      }
+      .spacer-3-grey-border {
+        height: 3vh;
+        width: 90%;
+        border-top: solid 0.6vw #808080;
+      }
+      .spacer-2 {
+        height: 2vh;
+        width: 100%;
+      }
+      .spacer-2-border {
+        border-top: solid 0.66vh #ff3300;
+        height: 2vh;
+        width: 100%;
+      }
+      /* Title. */
+      .title {
+        height: 8vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        font-family: 'Bahnschrift';
+        font-size: 10vw;
+        font-weight: bold;
+      }
+      /* Description. */
+      .description {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Bahnschrift';
+        font-size: 5.5vw;
+        font-weight: bold;
+        text-align: center;
+      }
+      .description p {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      /* Blocks. */
+      .memberships-blocks {
+        width: 100%;
+      }
+      .memberships-blocks-1 {
+        height: 0%;
+        width: 100%;
+      }
+      .memberships-blocks-2 {
+        height: 100%;
+        width: 100%;
+      }
+      .memberships-blocks-2-1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 4.2vh;
+      }
+      .memberships-blocks-2-1-1 {
+        height: 85%;
+        width: 85%;
+        background-image: linear-gradient(66deg, #f9f9f9, #f1f1f1);
+        border-radius: 2.2vw;
+        box-shadow: 0px 0px 3px #808080;
+      }
+      .memberships-blocks-2-1-1-1 {
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+      .memberships-blocks-2-1-1-1 img {
+        height: 17vw;
+        padding-top: 1vh;
+      }
+      .memberships-blocks-2-1-1-2 {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        font-family: 'Roboto';
+        font-size: 5.0vw;
+      }
+      .memberships-blocks-2-1-1-2 ul {
+        width: 100%;
+        text-align: left;
+        padding-left: 7.7vw;
+        padding-right: 2.2vw;
+      }
+      /* Memberships overview. */
+      .memberships-overview-title {
+        height: 12vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Bahnschrift';
+        font-size: 7vw;
+        font-weight: bold;
+      }
+      .memberships-overview-1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .memberships-overview-1-1 {
+        height: 10vh;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(66deg, #ff3300, #ff7700);
+        font-family: 'Bahnschrift';
+        font-size: 7.7vw;
+        font-weight: bold;
+        border-top: solid 0.3vw #808080;
+        border-bottom: solid 0.3vw #808080;
+        border-right: solid 0.3vw #808080;
+        border-left: solid 0.3vw #808080;
+      }
+      .memberships-overview-1-1 a {
+        text-decoration: none;
+        color: #ffffff;
+        text-shadow: 0px 0px 1px #ffffff;
+      }
+      .memberships-overview-1-1 img {
+        height: 12vw;
+        padding-left: 2.2vw;
+        padding-bottom: 0.6vw;
+      }
+      .memberships-overview-2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .memberships-overview-2-1 {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-bottom: solid 0.3vw #808080;
+        border-right: solid 0.3vw #808080;
+        border-left: solid 0.3vw #808080;
+        font-family: 'Roboto';
+        font-size: 5.0vw;
+      }
+      .memberships-overview-2-1 p {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-navigation" id="w">
+      <div class="top-navigation-banner-logo">
+        <a href="home.html"> <img src="trine-banner-logo.png" alt="Trine Banner Logo"> </a>
+      </div>
+      <div class="top-navigation-links">
+        <img src="top-navigation-mobile.png" alt="" onclick="topNavigation()">
+      </div>
+    </div>
+    <div class="top-spacer">
+    </div>
+
+    <div class="navigation" id="q">
+      <div class="navigation-link-top">
+        <div class="navigation-link-top-1">
+          <a href="our-app.html">Our App</a>
+        </div>
+        <div class="navigation-link-top-2">
+          <img src="top-navigation-x.png" alt="" onclick="topNavigationClose()">
+        </div>
+      </div>
+      <div class="navigation-link">
+        <a href="about.html">About</a>
+      </div>
+      <div class="navigation-link">
+        <a href="the-synastry-compendium.html">The Synastry Compendium</a>
+      </div>
+      <div class="navigation-link">
+        <a href="memberships.html">Memberships</a>
+      </div>
+      <div class="navigation-link">
+        <a href="charts.html">Charts</a>
+      </div>
+      <div class="navigation-link">
+        <a href="reports.html">Reports</a>
+      </div>
+      <div class="navigation-link">
+        <a href="media.html">Media</a>
+      </div>
+      <div class="navigation-link">
+        <a href="popular-astrology.html">Popular Astrology</a>
+      </div>
+      <div class="navigation-link">
+        <a href="account.html">Account</a>
+      </div>
+      <div class="navigation-link">
+
+      </div>
+      <div class="navigation-download">
+        <img src="google-play-store-badge.png" alt="" id="navgpsb" onclick="googlePlayStoreNavigation()">
+        <img src="app-store-badge.png" alt="" id="navasb" onclick="appStoreNavigation()">
+      </div>
+      <div class="navigation-social">
+        <img src="custom-instagram-icon-white-glow.png" alt="" onclick="instagramNavigation()">
+        <img src="custom-facebook-icon-white-glow.png" alt="" onclick="facebookNavigation()">
+        <img src="custom-pinterest-icon-white-glow.png" alt="" onclick="pinterestNavigation()">
+        <img src="custom-tumblr-icon-white-glow.png" alt="" onclick="tumblrNavigation()">
+        <img src="custom-twitter-icon-white-glow.png" alt="" onclick="twitterNavigation()">
+      </div>
+    </div>
+
+    <div class="spacer-2">
+    </div>
+    <div class="title">
+      Memberships
+    </div>
+
+    <div class="description">
+      <p>Upgrade your experience with a premium membership and unlock a wide range
+      of exclusive benefits.</p>
+    </div>
+
+    <div class="spacer-3">
+
+    </div>
+    <div class="memberships-blocks">
+      <div class="memberships-blocks-1">
+
+      </div>
+      <div class="memberships-blocks-2">
+        <div class="memberships-blocks-2-1">
+          <div class="memberships-blocks-2-1-1">
+            <div class="memberships-blocks-2-1-1-1">
+              <img src="trine-basic-badge.png" alt="" onclick="trineBasicNavigation()">
+            </div>
+            <div class="memberships-blocks-2-1-1-2">
+              <ul>
+                <li>Matching, Meeting, Meaningful Connections</li>
+                <li>Full Access to Analysis of the Sun, the Moon, the
+                Ascendant, and Venus</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="memberships-blocks-2-1">
+          <div class="memberships-blocks-2-1-1">
+            <div class="memberships-blocks-2-1-1-1">
+              <img src="trine-solar-badge.png" alt="" onclick="trineSolarNavigation()">
+            </div>
+            <div class="memberships-blocks-2-1-1-2">
+              <ul>
+                <li>No Limits on Sending Love</li>
+                <li>No Limits on Undos</li>
+                <li>Worldwide Browsing</li>
+                <li>No Advertisements</li>
+                <li>Full Access to Analysis of Mercury, Mars, Jupiter, and Saturn</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="memberships-blocks-2-1">
+          <div class="memberships-blocks-2-1-1">
+            <div class="memberships-blocks-2-1-1-1">
+              <img src="trine-lunar-badge.png" alt="" onclick="trineLunarNavigation()">
+            </div>
+            <div class="memberships-blocks-2-1-1-2">
+              <ul>
+                <li>6 Exaltations Per Week</li>
+                <li>Shine Once a Month For Free</li>
+                <li>See All Who Send Love</li>
+                <li>Affinity-based Match Suggestions</li>
+                <li>Full Access to Analysis of the North Node, the South Node, Uranus,
+                Neptune, and Pluto</li>
+                <li>Plus Everything Included with Trine Solar</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="memberships-blocks-2-1">
+          <div class="memberships-blocks-2-1-1">
+            <div class="memberships-blocks-2-1-1-1">
+              <img src="trine-venusian-badge.png" alt="" onclick="trineVenusianNavigation()">
+            </div>
+            <div class="memberships-blocks-2-1-1-2">
+              <ul>
+                <li>No Limits on Messaging</li>
+                <li>Priority in Matching, Messaging and Browse</li>
+                <li>1 Free Report Available for Download Each Month</li>
+                <li>Full Access to Analysis of the Descendant, the Midheaven, the
+                Nadir, Lilith, and Chiron</li>
+                <li>Plus Everything Included with Trine Lunar</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="memberships-blocks-1">
+
+      </div>
+    </div>
+
+    <div class="spacer-3">
+
+    </div>
+    <div class="memberships-overview-title">
+      <p>Overview of Premium Memberships</p>
+    </div>
+    <div class="memberships-overview-1">
+      <div class="memberships-overview-1-1">
+        <a href="trine-basic.html">Basic</a>
+        <img src="trine-basic-badge.png" alt="">
+      </div>
+    </div>
+    <div class="memberships-overview-2">
+      <div class="memberships-overview-2-1">
+        <p>Trine Basic is our Free Membership</p>
+      </div>
+    </div>
+    <div class="memberships-overview-2">
+      <div class="memberships-overview-2-1">
+        <p>Matching, Meeting, Meaningful Connections</p>
+      </div>
+    </div>
+    <div class="memberships-overview-2">
+      <div class="memberships-overview-2-1">
+        <p>Full Access to Analysis of Sun, Moon, Ascendant, and Venus</p>
+      </div>
+    </div>
+
+    <div class="spacer-3">
+
+    </div>
+    <div class="memberships-overview-1">
+      <div class="memberships-overview-1-1">
+        <a href="trine-solar.html">Solar</a>
+        <img src="trine-solar-badge.png" alt="">
+      </div>
+    </div>
+    <div class="memberships-overview-2">
+      <div class="memberships-overview-2-1">
+        <p>Trine Solar is the First Level of our Paid Memberships</p>
+      </div>
+    </div>
+    <div class="memberships-overview-2">
+      <div class="memberships-overview-2-1">
+        <p>No Limits on Sending Love</p>
+      </div>
+    </div>
+    <div class="memberships-overview-2">
+      <div class="memberships-overview-2-1">
+        <p>No Limits on Undos</p>
+      </div>
+    </div>
+    <div class="memberships-overview-2">
+      <div class="memberships-overview-2-1">
+        <p>Worldwide Browsing</p>
+      </div>
+    </div>
+    <div class="memberships-overview-2">
+      <div class="memberships-overview-2-1">
+        <p>No Advertisements</p>
+      </div>
+    </div>
+    <div class="memberships-overview-2">
+      <div class="memberships-overview-2-1">
+        <p>Full Access to Analysis of Mercury, Mars, Jupiter, and Saturn</p>
+      </div>
+    </div>
+
+    <div class="spacer-3">
+
+    </div>
+  </body>
+</html>
