@@ -308,8 +308,12 @@
       }
       .memberships-overview-1-1 img {
         height: 14vw;
-        padding-left: 2.2vw;
+        padding-right: 2.2vw;
         padding-bottom: 0.6vw;
+      }
+      .moa img {
+        height: 2.8vw;
+        padding-bottom: 1.8vw;
       }
       .memberships-overview-2 {
         width: 100%;
@@ -360,7 +364,7 @@
       .memberships-notes ul {
         list-style-type: none;
         padding-left: 6vw;
-        padding-right: 3vw;
+        padding-right: 6vw;
         padding-bottom: 0;
         padding-top: 0;
       }
@@ -407,8 +411,8 @@
         font-size: 5.5vw;
       }
       .about-trine-paragraph p {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 6vw;
+        padding-right: 6vw;
         margin-bottom: 1vh;
         margin-top: 1vh;
       }
@@ -759,10 +763,11 @@
     <div class="memberships-overview-title">
       <p>Overview of Premium Memberships</p>
     </div>
+
     <div class="memberships-overview-1">
       <div class="memberships-overview-1-1">
-        <a href="trine-basic.html">Basic</a>
         <img src="trine-basic-badge.png" alt="">
+        <a href="trine-basic.html">Basic</a>
       </div>
     </div>
     <div class="memberships-overview-2">
@@ -786,8 +791,8 @@
     </div>
     <div class="memberships-overview-1">
       <div class="memberships-overview-1-1">
-        <a href="trine-solar.html">Solar</a>
         <img src="trine-solar-badge.png" alt="">
+        <a href="trine-solar.html">Solar</a>
       </div>
     </div>
     <div class="memberships-overview-2">
@@ -817,7 +822,7 @@
     </div>
     <div class="memberships-overview-2">
       <div class="memberships-overview-2-1">
-        <p>Full Access to Analysis of Mercury, Mars, Jupiter, and Saturn</p>
+        <p>Full Access to Analysis of Mercury, Mars, Jupiter, and Saturn<span class="moa"><img src="six-asterisk.png" alt=""></span></p>
       </div>
     </div>
 
@@ -826,8 +831,8 @@
     </div>
     <div class="memberships-overview-1">
       <div class="memberships-overview-1-1">
-        <a href="trine-lunar.html">Lunar</a>
         <img src="trine-lunar-badge.png" alt="">
+        <a href="trine-lunar.html">Lunar</a>
       </div>
     </div>
     <div class="memberships-overview-2">
@@ -837,12 +842,12 @@
     </div>
     <div class="memberships-overview-2">
       <div class="memberships-overview-2-1">
-        <p>6 Exaltations Per Week</p>
+        <p>6 Exaltations Per Week<span class="moa"><img src="six-asterisk.png" alt=""></span></p>
       </div>
     </div>
     <div class="memberships-overview-2">
       <div class="memberships-overview-2-1">
-        <p>Shine Once a Month For Free</p>
+        <p>Shine Once a Month For Free<span class="moa"><img src="six-asterisk.png" alt=""></span></p>
       </div>
     </div>
     <div class="memberships-overview-2">
@@ -872,8 +877,8 @@
     </div>
     <div class="memberships-overview-1">
       <div class="memberships-overview-1-1">
-        <a href="trine-venusian.html">Venusian</a>
         <img src="trine-venusian-badge.png" alt="">
+        <a href="trine-venusian.html">Venusian</a>
       </div>
     </div>
     <div class="memberships-overview-2">
@@ -883,23 +888,22 @@
     </div>
     <div class="memberships-overview-2">
       <div class="memberships-overview-2-1">
-        <p>No Limits on Messaging</p>
+        <p>No Limits on Messaging<span class="moa"><img src="six-asterisk.png" alt=""></span></p>
       </div>
     </div>
     <div class="memberships-overview-2">
       <div class="memberships-overview-2-1">
-        <p>Priority in Matching, Messaging, and Browse</p>
+        <p>Priority in Matching, Messaging, and Browse<span class="moa"><img src="six-asterisk.png" alt=""></span></p>
       </div>
     </div>
     <div class="memberships-overview-2">
       <div class="memberships-overview-2-1">
-        <p>1 Free Report Available for Download Each Month</p>
+        <p>1 Free Report Available for Download Each Month<span class="moa"><img src="six-asterisk.png" alt=""></span></p>
       </div>
     </div>
     <div class="memberships-overview-2">
       <div class="memberships-overview-2-1">
-        <p>Full Access to Analysis of Descendant, Midheaven, Nadir, Lilith,
-        and Chiron</p>
+        <p>Full Access to Analysis of Descendant, Midheaven, Nadir, Lilith, and Chiron<span class="moa"><img src="six-asterisk.png" alt=""></span></p>
       </div>
     </div>
     <div class="memberships-overview-2">
@@ -911,7 +915,7 @@
     <div class="spacer-6">
 
     </div>
-    <div class="spacer-2">
+    <div class="spacer-3">
 
     </div>
     <div class="memberships-notes-title">
@@ -954,7 +958,7 @@
       of the burgeoning medium of mobile astrology.</p>
     </div>
 
-    <div class="spacer-2">
+    <div class="spacer-3">
 
     </div>
     <div class="spacer-6">
@@ -1240,6 +1244,18 @@
   }
   function houseImpactNavigation() {
     window.location.href = "house-impact.html";
+  }
+  function trineBasicNavigation() {
+    window.location.href = "trine-basic.html";
+  }
+  function trineSolarNavigation() {
+    window.location.href = "trine-solar.html";
+  }
+  function trineLunarNavigation() {
+    window.location.href = "trine-lunar.html";
+  }
+  function trineVenusianNavigation() {
+    window.location.href = "trine-venusian.html";
   }
   </script>
 </html>
